@@ -21,7 +21,7 @@ In addition, this project will include:
 
 # Wireframes
 
-![Wireframe](https://wireframe.cc/Mh99mi)
+![Wireframe](./Wireframe.png)
 
 # Technologies, Libraries, APIs
 
