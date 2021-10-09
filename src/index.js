@@ -3,16 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.width = 1500;
     canvas.height = 1500;
     const ctx = canvas.getContext("2d");
-    ctx.fillStyle = "black";
     ctx.strokeStyle = "red";
     ctx.lineWidth = 5;
-    ctx.fillRect(200, 100, 1020, 500);
     ctx.strokeRect(200, 100, 1020, 500);
     
     ctx.strokeStyle = "black";
     ctx.strokeRect(200, 650, 1020, 100);
     
-    let tiles = setInterval(init, 1000);
+    // let tiles = setInterval(init, 1000);
+    init();
+    let input = document.getElementById("pressed-key");
+    input.oninput = function () {
+        if (input.value === "k") {
+            alert("hi!");
+        }
+    };
 })
 
 function init() {
@@ -32,13 +37,16 @@ function draw() {
     
     // Tiles
     if (y <= 570) { // need to use collision detection
+        ctx.clearRect(0, 0, 30, 30);
         ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.fillRect(200, 100, 1020, 500);
         ctx.fillStyle = "white";
         ctx.fillRect(300, y, 30, 30);
         ctx.font = "20px serif";
         ctx.fillStyle = "red";
-        ctx.fillText("K", 300, y + 20);
-
+        ctx.fillText("K", 308, y + 22);
+        
         ctx.fillRect(400, y, 30, 30);
         ctx.fillRect(500, y, 30, 30);
         ctx.fillRect(600, y, 30, 30);
@@ -58,5 +66,14 @@ function draw() {
     window.requestAnimationFrame(draw);
 }
 
+// document.getElementById("pressed-key").addEventListener("keydown", function (e) {
+//     if (e.key === "k") {
+//         alert("hi!");
+//     }
+// })
 
-
+// document.getElementById("pressed-key")
+//     if (e.key === "k") {
+//         alert("hi!");
+//     }
+// })
