@@ -1,11 +1,21 @@
 #k {
-    font-size: 100px;
     position: absolute;
-    top: 50%;
-    // transform: translate(-50%, -50%);
+    font-size: 100px;
 }
 
-#k {
-    transform: translateY(-100vh);
-    animation: forwards;
+#j {
+    position: absolute;
+    font-size: 100px;
+}
+
+#pressed-key {
+    position: relative;
+    // display: flex;
+    width: 1000PX;
+    height: 100px;
+    font-size: 20pt;
+    text-align: center;
+    top: 500px;
+
+
 }
