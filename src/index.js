@@ -1,3 +1,4 @@
+// import * as Tone from "tone";
 import "./styles/index.scss";
 
 /*document.addEventListener("DOMContentLoaded", function () {
@@ -91,20 +92,21 @@ function draw() {
 // const { isInteger } = require("core-js/core/number");
 
 // document.addEventListener("DOMContentLoader", function () {
-
-// })
-
-// function init() {
-
-// }
-
-// function drop() {
-
-// }
+    
+    // })
+    
+    // function init() {
+        
+        // }
+        
+        // function drop() {
+            
+            // }
+            
 
 document.addEventListener("DOMContentLoaded", function () {
-
-
+                
+                
     move();
     
 })
@@ -132,7 +134,9 @@ document.addEventListener("keydown", function (e) {
     // let arr = ["h", "j", "k"]
     for (let i = 0; i < words.childElementCount; i++) {
         if (e.key === words.children[i].id) {
-            alert("hi!");
+            // alert("hi!");
+            let synth = new Tone.Synth().toDestination();
+            synth.triggerAttackRelease("C4", "32n");
             words.firstElementChild.remove();
         }
         // if (e.key === "l") {
@@ -143,3 +147,4 @@ document.addEventListener("keydown", function (e) {
 
 
 // Index.js > newGame.start() > game_view.js > start() > step > game.js > moveObjects() + checkCollisons()
+

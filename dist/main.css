@@ -9,6 +9,7 @@
 #j {
   position: absolute;
   font-size: 100px;
+  left: 150px;
 }
 
 #pressed-key {
@@ -18,4 +19,5 @@
   font-size: 20pt;
   text-align: center;
   top: 500px;
+  left: 30px;
 }
