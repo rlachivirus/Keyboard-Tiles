@@ -56,14 +56,14 @@ function draw() {
         ctx.fillStyle = "red";
         ctx.fillText("K", 308, y + 22);
         
-        // ctx.fillRect(400, y, 30, 30);
-        // ctx.fillRect(500, y, 30, 30);
-        // ctx.fillRect(600, y, 30, 30);
-        // ctx.fillRect(700, y, 30, 30);
-        // ctx.fillRect(800, y, 30, 30);
-        // ctx.fillRect(900, y, 30, 30);
-        // ctx.fillRect(1000, y, 30, 30);
-        // ctx.fillRect(1100, y, 30, 30);
+        ctx.fillRect(400, y, 30, 30);
+        ctx.fillRect(500, y, 30, 30);
+        ctx.fillRect(600, y, 30, 30);
+        ctx.fillRect(700, y, 30, 30);
+        ctx.fillRect(800, y, 30, 30);
+        ctx.fillRect(900, y, 30, 30);
+        ctx.fillRect(1000, y, 30, 30);
+        ctx.fillRect(1100, y, 30, 30);
         ctx.fill();
         ctx.closePath();
     }
@@ -78,7 +78,7 @@ function draw() {
 
     window.requestAnimationFrame(draw);
 }
-
+*/
 // document.getElementById("pressed-key").addEventListener("keydown", function (e) {
 //     let input = document.getElementById("pressed-key");
 //     let inputVal = document.getElementById(input);
@@ -86,7 +86,7 @@ function draw() {
 //         alert("hi!");
 //     }
 // })
-*/
+
 
 // const { isInteger } = require("core-js/core/number");
 
@@ -101,6 +101,30 @@ function draw() {
 // function drop() {
 
 // }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    move();
+    
+})
+function move() {
+    let k = document.getElementById("k");
+    let y = 0;
+    let id = setInterval(down, 30);
+    function down() {
+        if (y >= 400) {
+            k.remove();
+        } else {
+            y++;
+            k.style.top = y + "px";
+        }
+    }
+    // while (k.style.top <= 100) {
+    // }
+    // setInterval(move, 1000);
+}
+
 
 document.addEventListener("keydown", function (e) {
     let words = document.getElementById("words");
@@ -117,3 +141,5 @@ document.addEventListener("keydown", function (e) {
     }
 })
 
+
+// Index.js > newGame.start() > game_view.js > start() > step > game.js > moveObjects() + checkCollisons()
