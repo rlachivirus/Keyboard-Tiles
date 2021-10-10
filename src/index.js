@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     move();
     
 })
+
 function move() {
     let k = document.getElementById("k");
     let y = 0;
@@ -130,20 +131,83 @@ function move() {
 
 document.addEventListener("keydown", function (e) {
     let words = document.getElementById("words");
+    let music = ["A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G", "A", "B", "C"];
+    let synth = new Tone.Synth()//.toDestination();
+    synth.oscillator.type = "sine";
+    synth.toMaster();
 
     // let arr = ["h", "j", "k"]
-    for (let i = 0; i < words.childElementCount; i++) {
-        if (e.key === words.children[i].id) {
+    // for (let i = 0; i < words.childElementCount; i++) {
+        if (e.key === words.children[0].id) {
             // alert("hi!");
-            let synth = new Tone.Synth().toDestination();
-            synth.triggerAttackRelease("C4", "32n");
+            
+            synth.triggerAttackRelease(words.children[0].className + "4", "16n");
             words.firstElementChild.remove();
-        }
+            
+            // music.shift();
+        // }
         // if (e.key === "l") {
         //     alert("wrong!");
-        // }
-    }
+        }
+    // }
 })
+
+// document.addEventListener("keydown", function (e) {
+    // let music = ["A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G", "A", "B", "C"];
+    // let synth = new Tone.Synth()//.toDestination();
+    // synth.oscillator.type = "sine";
+    // synth.toDestination();
+
+    // let words = document.getElementById("words");
+
+    // let input = document.getElementById("pressed-key");
+
+    // synth.triggerAttackRelease(music[0] + "4", "16n");
+    // music.shift();
+
+    // input.oninput = function () {
+    //     if (input.value[input.value.length - 1] === e.key) {
+    //         let key = music.shift();
+    //         return synth.triggerAttackRelease(key + "4", "16n");
+    //     }
+    // }
+
+    // if (e.key === input.value[input.value.length - 1]) {
+    //     let key = music.shift();
+    //     return synth.triggerAttackRelease(key + "4", "16n");
+    // }
+    // let music = ["A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G", "A", "B", "C"];
+
+
+    // while (music.length >= 0) {
+    // switch (e.key === input.value) {
+        
+    //     case words.children[0].id:
+    //         debugger
+    //         synth.triggerAttackRelease(music[0] + "4", "16n"); 
+    //         music.shift()
+    //         debugger
+    //         break;
+
+    //     case false:
+    //         debugger
+    //         return;
+        // case "j":
+        //     debugger
+        //     return synth.triggerAttackRelease(music[1] + "4", "16n");
+        // case "h":
+        //     return synth.triggerAttackRelease(music[2] + "4", "16n");
+        // case "l":
+        //     return synth.triggerAttackRelease(music[3] + "4", "16n");
+        // case "g":
+        //     return synth.triggerAttackRelease(music[4] + "4", "16n");
+    //     default:
+    //         return;
+    // }
+// }
+    
+// })
+
 
 
 // Index.js > newGame.start() > game_view.js > start() > step > game.js > moveObjects() + checkCollisons()
