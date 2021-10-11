@@ -25,21 +25,29 @@ Game.prototype.drop = function () {
         let id = setInterval(down, 30);
 
         function down() {
-            if (y >= 400) {
-                // .remove();
-            } 
+            for (let i = 0; i < words.childElementCount; i++) {
+                if (words.children[i].style.top === "400px") {
+                    words.children[i].remove();
+                }
+            }
+        
             y++;
             lastEle.style.top = y + "px";
-
         }
     // }
-
+        if (this.letters.length === 0) {
+            clearInterval(id);
+        }
 
 }
 
 Game.prototype.fillLetters = function () {
     this.letters = ["a", "s", "d", "f", "g", "h", "j", "k"];
     this.pianoKeys = ["D", "E", "F", "G", "A", "B", "C", "D"];
+    // this.letters = ["♥", "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥",
+    //     "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥"];
+
+    // this.pianoKeys = ["D", "E", "F", "G", "A", "B", "C", "D"];
 }
 
 Game.prototype.assignColumn = function () {
@@ -55,6 +63,7 @@ Game.prototype.assignColumn = function () {
     // let id = setInterval(assign, 5000);
 
     // for (let i = 0; i < this.letters.length; i++) {
+    if (this.letters.length > 0) {
         let subEle = document.createElement("span");
         subEle.setAttribute("id", letter);
         subEle.setAttribute("class", pianoKey);
@@ -63,9 +72,30 @@ Game.prototype.assignColumn = function () {
         subEle.style.left = (Math.random() * (950 - 100 + 1) + 100) + "px";
         let element = document.getElementById("words");
         element.appendChild(subEle);
+    }
     // }
 }
 
+Game.prototype.gameStart = function () {
+
+    this.fillLetters();
+    // debugger
+    let assign = setInterval(() => {
+        this.assignColumn();
+    }, 1000);
+    let dropLetter = setInterval(() => {
+        this.drop();
+    }, 1000);
+    // let dropLetter = setInterval(this.drop, 1000);
+    this.gameClear(assign, dropLetter);
+}
+
+Game.prototype.gameClear = function (assign, drop) {
+    if (this.letters.length === 0) {
+        clearInterval(assign);
+        clearInterval(drop);
+    }
+}
 
 
 module.exports = Game;

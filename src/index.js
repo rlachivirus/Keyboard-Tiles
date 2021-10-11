@@ -111,15 +111,18 @@ function draw() {
 document.addEventListener("DOMContentLoaded", function () {
                 
     let game = new Game();      
+    game.gameStart();
+    // game.fillLetters();
+    // debugger
+    // let assign = setInterval(function () {
+    //     game.assignColumn();
+    // }, 1000);
+    // let drop = setInterval(game.drop, 1000);
+    // game.gameClear(assign, drop);
+
     // move();
-    game.fillLetters();
-    debugger
-    setInterval(function () {
-        game.assignColumn();
-    }, 1000);
     // debugger
     // clearInterval(game.drop, 2000);
-    setInterval(game.drop, 1000);
     // setInterval(function () {
     //     game.drop();
     // }, 1000);
