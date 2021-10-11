@@ -1,5 +1,5 @@
 // import * as Tone from "tone";
-// import "./styles/index.scss";
+// import "./styles/index";
 // import "./scripts/keys.js";
 // import "./scripts/letters.js";
 const Game = require("./scripts/game");
@@ -113,12 +113,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let game = new Game();      
     // move();
     game.fillLetters();
-    game.assignColumns();
-    game.move();
+    debugger
+    setInterval(function () {
+        game.assignColumn();
+    }, 1000);
+    // debugger
+    // clearInterval(game.drop, 2000);
+    setInterval(game.drop, 1000);
+    // setInterval(function () {
+    //     game.drop();
+    // }, 1000);
+    // debugger
+    // game.drop();
     
 })
-
-
 
 
 document.addEventListener("keydown", function (e) {
@@ -135,7 +143,7 @@ document.addEventListener("keydown", function (e) {
             
             synth.triggerAttackRelease(words.children[0].className + "4", "16n");
             words.firstElementChild.remove();
-            
+
             // music.shift();
         // }
         // if (e.key === "l") {
