@@ -1,5 +1,9 @@
 // import * as Tone from "tone";
-import "./styles/index.scss";
+// import "./styles/index.scss";
+// import "./scripts/keys.js";
+// import "./scripts/letters.js";
+const Game = require("./scripts/game");
+
 
 /*document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("canvas");
@@ -106,32 +110,20 @@ function draw() {
 
 document.addEventListener("DOMContentLoaded", function () {
                 
-                
-    move();
+    let game = new Game();      
+    // move();
+    game.fillLetters();
+    game.assignColumns();
+    game.move();
     
 })
 
-function move() {
-    let k = document.getElementById("k");
-    let y = 0;
-    let id = setInterval(down, 30);
-    function down() {
-        if (y >= 400) {
-            k.remove();
-        } else {
-            y++;
-            k.style.top = y + "px";
-        }
-    }
-    // while (k.style.top <= 100) {
-    // }
-    // setInterval(move, 1000);
-}
+
 
 
 document.addEventListener("keydown", function (e) {
     let words = document.getElementById("words");
-    let music = ["A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G", "A", "B", "C"];
+    // let music = ["A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G", "A", "B", "C"];
     let synth = new Tone.Synth()//.toDestination();
     synth.oscillator.type = "sine";
     synth.toMaster();
@@ -151,6 +143,20 @@ document.addEventListener("keydown", function (e) {
         }
     // }
 })
+
+// function move() {
+//     let k = document.getElementById("k");
+//     let y = 0;
+//     let id = setInterval(down, 30);
+//     function down() {
+//         if (y >= 400) {
+//             k.remove();
+//         } else {
+//             y++;
+//             k.style.top = y + "px";
+//         }
+//     }
+// }
 
 // document.addEventListener("keydown", function (e) {
     // let music = ["A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G", "A", "B", "C"];
