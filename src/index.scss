@@ -1,39 +1,71 @@
-.body {
+* {
+    box-sizing: border-box;
+}
+
+body {
     background-color: black;
 }
 
-.topnav {
-    // background-color: white;
-    top: 100px;
+.header {
+    background-color: greenyellow;
     padding: 40px;
+    text-align: center;
+    top: 10%;
 }
+
+.topnav {
+    // float: left;
+    background-color: hotpink;
+    // overflow: hidden;
+    top: 100px;
+    padding: 20px;
+}
+
+// .topnav a {
+//     float: left;
+//     display: block;
+//     padding: 14px 16px;
+// }
 
 .topnav a:hover {
-    float: left;
     background-color: white;
-    padding: 25px;
 }
 
-.column {
-    // background-color: green;
+
+.sideColumn {
     float: left;
-    padding: 10px;
-}
-
-.column.side {
-    top: 100px;
-    padding: 40px;
+    border: block;
+    padding: 20px;
+    // background-color: white;
     width: 25%;
+    // height: 800px;
+
+
 }
 
-.column.side a:hover {
-    background-color: white;
-    padding: 25px;
-}
+// .sideColumn a:hover {
+//     background-color: white;
+//     padding: 25px;
+// }
 
-.column.middle {
+.midColumn {
+    float: left;
+    border: solid 20px;
+    border-color: white;
+    padding: 20px;
     // background-color: white;
     width: 50%;
+    height: 750px;
+
+}
+
+.midColumn span {
+    border: block;
+    background-color: indianred;
+}
+
+.row:after {
+    display: table;
 }
 
 #words span {
@@ -42,21 +74,16 @@
     font-size: 100px;
 }
 
-// #j {
-//     position: absolute;
-//     font-size: 100px;
-//     left: 150px;
-// }
-
 #pressed-key {
-    position: relative;
+    position: fixed;
     // display: flex;
-    width: 1000PX;
+    width: 50%;
     height: 100px;
     font-size: 20pt;
     text-align: center;
-    top: 600px;
-    left: 27%;
+    top: 80%;
+    left: 25%;
+    
 
 
 }
