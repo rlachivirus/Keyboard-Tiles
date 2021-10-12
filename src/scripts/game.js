@@ -26,13 +26,13 @@ Game.prototype.drop = function () {
 
         function down() {
             for (let i = 0; i < words.childElementCount; i++) {
-                if (words.children[i].style.top === "600px") {
+                if (words.children[i].style.top === "700px") {
                     words.children[i].remove();
                 }
             }
         
             y++;
-            lastEle.style.top = (200 + y) + "px";
+            lastEle.style.top = (300 + y) + "px";
         }
     // }
         if (this.letters.length === 0) {
@@ -84,7 +84,7 @@ Game.prototype.assignColumn = function () {
         subEle.setAttribute("class", pianoKey);
         let node = document.createTextNode(letter);
         subEle.appendChild(node);
-        subEle.style.left = (Math.random() * (950 - 100 + 1) + 100) + "px";
+        subEle.style.left = (Math.random() * (1050 - 100 + 1) + 590) + "px";
         let element = document.getElementById("words");
         element.appendChild(subEle);
     }
@@ -97,10 +97,10 @@ Game.prototype.gameStart = function () {
     // debugger
     let assign = setInterval(() => {
         this.assignColumn();
-    }, 700);
+    }, 600);
     let dropLetter = setInterval(() => {
         this.drop();
-    }, 700);
+    }, 600);
     // let dropLetter = setInterval(this.drop, 1000);
     // this.gameClear(assign, dropLetter);
 }
