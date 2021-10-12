@@ -26,7 +26,7 @@ Game.prototype.drop = function () {
 
         function down() {
             for (let i = 0; i < words.childElementCount; i++) {
-                if (words.children[i].style.top === "800px") {
+                if (words.children[i].style.top === "850px") {
                     words.children[i].remove();
                 }
                 
@@ -38,6 +38,7 @@ Game.prototype.drop = function () {
     // }
         if (this.letters.length === 0) {
             clearInterval(id);
+            y = 2;
         }
 
 }

@@ -11,44 +11,71 @@ body {
 
 .header {
   background-color: greenyellow;
-  padding: 40px;
+  padding: 50px;
   text-align: center;
   top: 10%;
 }
 
 .topnav {
-  background-color: hotpink;
-  top: 100px;
-  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 400px;
 }
 
-.topnav a:hover {
-  background-color: white;
+.topnav span {
+  font-size: 30px;
+  padding: 15px;
 }
 
-.sideColumn {
-  float: left;
-  border: block;
+.record {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 490px;
+}
+
+.record span {
+  display: flex;
+  align-content: flex-start;
+  font-size: 40px;
+  padding: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
   padding: 20px;
   width: 25%;
+  font-size: 50px;
 }
 
 .midColumn {
-  float: left;
+  display: flex;
   border: solid 20px;
   border-color: white;
-  padding: 20px;
+  padding: 16%;
   width: 50%;
-  height: 750px;
 }
 
-.midColumn span {
-  border: block;
-  background-color: indianred;
-}
-
-.row:after {
-  display: table;
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  width: 25%;
+  font-size: 50px;
 }
 
 #words span {
@@ -63,6 +90,6 @@ body {
   height: 100px;
   font-size: 20pt;
   text-align: center;
-  top: 80%;
+  top: 85%;
   left: 25%;
 }
