@@ -21,18 +21,19 @@ Game.prototype.drop = function () {
 
     // let firstEle = words.children[0]
     // for (let i = 0; i < words.childElementCount; i++) {
-        let y = 0;
-        let id = setInterval(down, 20);
+        let y = 2;
+        let id = setInterval(down, 10);
 
         function down() {
             for (let i = 0; i < words.childElementCount; i++) {
-                if (words.children[i].style.top === "700px") {
+                if (words.children[i].style.top === "800px") {
                     words.children[i].remove();
                 }
+                
             }
+            y = y + 2;
+            lastEle.style.top = (250 + y) + "px";
         
-            y++;
-            lastEle.style.top = (300 + y) + "px";
         }
     // }
         if (this.letters.length === 0) {
@@ -56,13 +57,13 @@ Game.prototype.fillLetters = function () {
         "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
         "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
         "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
-        "f", "g", "h", "j", "k"];
+        "f", "g", "h", "j", "k", "k"];
     this.pianoKeys = ["E", "E", "E", "C", "E", "G", "G", "C", "G", "E", "A", "B", "A#",
         "A", "G", "E", "G", "A", "F", "G", "E", "C", "D", "B", "C", "G",
         "E", "A", "B", "A#", "A", "G", "E", "G", "A", "F", "G", "E", "C", "D",
         "B", "G", "F#", "F", "D#", "E", "G#", "A", "C", "A", "C", "D", "G",
         "F#", "F", "D#", "E", "C", "C", "C", "G", "F#", "F", "D#", "E", "G#",
-        "A", "C", "A", "C", "D", "D#", "D", "C"];
+        "A", "C", "A", "C", "D", "D#", "D", "C", "C"];
 }
 
 Game.prototype.assignColumn = function () {
@@ -97,10 +98,10 @@ Game.prototype.gameStart = function () {
     // debugger
     let assign = setInterval(() => {
         this.assignColumn();
-    }, 600);
+    }, 700);
     let dropLetter = setInterval(() => {
         this.drop();
-    }, 600);
+    }, 700);
     // let dropLetter = setInterval(this.drop, 1000);
     // this.gameClear(assign, dropLetter);
 }

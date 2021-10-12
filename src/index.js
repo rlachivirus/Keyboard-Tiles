@@ -111,7 +111,7 @@ function draw() {
 document.addEventListener("DOMContentLoaded", function () {
                 
     let game = new Game();      
-    game.gameStart();
+    document.getElementById("pressed-key").addEventListener("click", () => {game.gameStart()});
     // game.fillLetters();
     // debugger
     // let assign = setInterval(function () {

@@ -1,39 +1,54 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-.body {
+* {
+  box-sizing: border-box;
+}
+
+body {
   background-color: black;
 }
 
-.topnav {
-  top: 100px;
+.header {
+  background-color: greenyellow;
   padding: 40px;
+  text-align: center;
+  top: 10%;
+}
+
+.topnav {
+  background-color: hotpink;
+  top: 100px;
+  padding: 20px;
 }
 
 .topnav a:hover {
-  float: left;
   background-color: white;
-  padding: 25px;
 }
 
-.column {
+.sideColumn {
   float: left;
-  padding: 10px;
-}
-
-.column.side {
-  top: 100px;
-  padding: 40px;
+  border: block;
+  padding: 20px;
   width: 25%;
 }
 
-.column.side a:hover {
-  background-color: white;
-  padding: 25px;
+.midColumn {
+  float: left;
+  border: solid 20px;
+  border-color: white;
+  padding: 20px;
+  width: 50%;
+  height: 750px;
 }
 
-.column.middle {
-  width: 50%;
+.midColumn span {
+  border: block;
+  background-color: indianred;
+}
+
+.row:after {
+  display: table;
 }
 
 #words span {
@@ -43,11 +58,11 @@
 }
 
 #pressed-key {
-  position: relative;
-  width: 1000PX;
+  position: fixed;
+  width: 50%;
   height: 100px;
   font-size: 20pt;
   text-align: center;
-  top: 600px;
-  left: 27%;
+  top: 80%;
+  left: 25%;
 }

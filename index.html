@@ -5,33 +5,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/reset.css" type="text/css">
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="https://unpkg.com/tone"></script>
     <script src="./dist/main.js"></script>
     <title>Project Name</title>
 </head>
 
-<body class="body">
+<body>
 <div class="header">Header</div>
-<div></div>
+<!-- <div></div> -->
 
     <div class="topnav">
         <a href="">Nav1</a>
         <a href="">Nav2</a>
     </div>
 
-    <div class="column side">
-        <a href="">Nav1</a>
-        <a href="">Nav2</a>
-    </div>
-    
-    <div class="column middle"></div>
-    <div class="column side"></div>
-    
-    <div id="words">
-    </div>
-    
+    <div class="row">
+        <div class="sideColumn">SIDE COLUMN
+            <a href="">Nav1</a>
+            <a href="">Nav2</a>
+        </div>
+        
+        <div class="midColumn">MIDDLE COLUMN
+            <span>MISSES</span>
+            <span>SCORE</span>
+        </div>
 
+        <div class="sideColumn">SIDE COLUMN</div>
+
+    </div>
+    
+    <div id="words"></div>
     
     <input type="text" id="pressed-key" placeholder="type">
 
