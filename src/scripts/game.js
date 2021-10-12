@@ -22,17 +22,17 @@ Game.prototype.drop = function () {
     // let firstEle = words.children[0]
     // for (let i = 0; i < words.childElementCount; i++) {
         let y = 0;
-        let id = setInterval(down, 30);
+        let id = setInterval(down, 20);
 
         function down() {
             for (let i = 0; i < words.childElementCount; i++) {
-                if (words.children[i].style.top === "400px") {
+                if (words.children[i].style.top === "600px") {
                     words.children[i].remove();
                 }
             }
         
             y++;
-            lastEle.style.top = y + "px";
+            lastEle.style.top = (200 + y) + "px";
         }
     // }
         if (this.letters.length === 0) {
@@ -42,12 +42,27 @@ Game.prototype.drop = function () {
 }
 
 Game.prototype.fillLetters = function () {
-    this.letters = ["a", "s", "d", "f", "g", "h", "j", "k"];
-    this.pianoKeys = ["D", "E", "F", "G", "A", "B", "C", "D"];
+    // this.letters = ["a", "s", "d", "f", "g", "h", "j", "k"];
+    // this.pianoKeys = ["D", "E", "F", "G", "A", "B", "C", "D"];
+
     // this.letters = ["♥", "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥",
     //     "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥"];
 
     // this.pianoKeys = ["D", "E", "F", "G", "A", "B", "C", "D"];
+
+    this.letters = ["a", "s", "d", "f", "g", "h", "j", "k", "a",
+        "s", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j",
+        "k", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+        "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+        "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+        "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+        "f", "g", "h", "j", "k"];
+    this.pianoKeys = ["E", "E", "E", "C", "E", "G", "G", "C", "G", "E", "A", "B", "A#",
+        "A", "G", "E", "G", "A", "F", "G", "E", "C", "D", "B", "C", "G",
+        "E", "A", "B", "A#", "A", "G", "E", "G", "A", "F", "G", "E", "C", "D",
+        "B", "G", "F#", "F", "D#", "E", "G#", "A", "C", "A", "C", "D", "G",
+        "F#", "F", "D#", "E", "C", "C", "C", "G", "F#", "F", "D#", "E", "G#",
+        "A", "C", "A", "C", "D", "D#", "D", "C"];
 }
 
 Game.prototype.assignColumn = function () {
@@ -82,12 +97,12 @@ Game.prototype.gameStart = function () {
     // debugger
     let assign = setInterval(() => {
         this.assignColumn();
-    }, 1000);
+    }, 700);
     let dropLetter = setInterval(() => {
         this.drop();
-    }, 1000);
+    }, 700);
     // let dropLetter = setInterval(this.drop, 1000);
-    this.gameClear(assign, dropLetter);
+    // this.gameClear(assign, dropLetter);
 }
 
 Game.prototype.gameClear = function (assign, drop) {
@@ -99,17 +114,3 @@ Game.prototype.gameClear = function (assign, drop) {
 
 
 module.exports = Game;
-
-// function move() {
-//     let k = document.getElementById("k");
-//     let y = 0;
-//     let id = setInterval(down, 30);
-//     function down() {
-//         if (y >= 400) {
-//             k.remove();
-//         } else {
-//             y++;
-//             k.style.top = y + "px";
-//         }
-//     }
-// }
