@@ -1,4 +1,43 @@
+.body {
+    background-color: black;
+}
+
+.topnav {
+    // background-color: white;
+    top: 100px;
+    padding: 40px;
+}
+
+.topnav a:hover {
+    float: left;
+    background-color: white;
+    padding: 25px;
+}
+
+.column {
+    // background-color: green;
+    float: left;
+    padding: 10px;
+}
+
+.column.side {
+    top: 100px;
+    padding: 40px;
+    width: 25%;
+}
+
+.column.side a:hover {
+    background-color: white;
+    padding: 25px;
+}
+
+.column.middle {
+    // background-color: white;
+    width: 50%;
+}
+
 #words span {
+    color: white;
     position: absolute;
     font-size: 100px;
 }
@@ -16,8 +55,8 @@
     height: 100px;
     font-size: 20pt;
     text-align: center;
-    top: 500px;
-    left: 30px;
+    top: 600px;
+    left: 27%;
 
 
 }

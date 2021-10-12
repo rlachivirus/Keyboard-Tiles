@@ -144,7 +144,7 @@ document.addEventListener("keydown", function (e) {
         if (e.key === words.children[0].id) {
             // alert("hi!");
             
-            synth.triggerAttackRelease(words.children[0].className + "4", "16n");
+            synth.triggerAttackRelease(words.children[0].className + "5", "6n");
             words.firstElementChild.remove();
 
             // music.shift();
