@@ -1,6 +1,9 @@
 function Game () {
     this.letters = [];
     this.pianoKeys = [];
+    this.pause = "resume";
+    // debugger
+    this.interval = null;
 
 }
 
@@ -21,20 +24,24 @@ Game.prototype.drop = function () {
 
     // let firstEle = words.children[0]
     // for (let i = 0; i < words.childElementCount; i++) {
-        let y = 2;
-        let id = setInterval(down, 10);
+            let y = 0;
+            // debugger
+            let id = setInterval(down.bind(this), 10);
+            // debugger
+            function down() {
+                // debugger
+                if (this.pause === "resume") {
 
-        function down() {
-            for (let i = 0; i < words.childElementCount; i++) {
-                if (words.children[i].style.top === "850px") {
-                    words.children[i].remove();
+                for (let i = 0; i < words.childElementCount; i++) {
+                    if (words.children[i].style.top === "850px") {
+                        words.children[i].remove();
+                    }
                 }
-                
+                y = y + 2;
+                    lastEle.style.top = (250 + y) + "px";
+                } 
             }
-            y = y + 2;
-            lastEle.style.top = (250 + y) + "px";
-        
-        }
+
     // }
         if (this.letters.length === 0) {
             clearInterval(id);
@@ -97,12 +104,31 @@ Game.prototype.gameStart = function () {
 
     this.fillLetters();
     // debugger
+    // debugger;
     let assign = setInterval(() => {
-        this.assignColumn();
+        if (this.pause === "resume") {
+            this.assignColumn();
+            this.drop();
+        }
     }, 700);
-    let dropLetter = setInterval(() => {
-        this.drop();
-    }, 700);
+    // let dropLetter = setInterval(() => {
+    //     this.drop();
+    // }, 700);
+
+    // while (true) {
+    //     // debugger;
+    //     if (this.pause === "resume") {
+    //         this.assignColumn();
+    //         this.drop();
+
+    //     } else if (this.pause === "pause") {
+    //         // clearInterval(assign);
+    //         // clearInterval(dropLetter);
+    //     }
+    // }
+
+
+    // }
     // let dropLetter = setInterval(this.drop, 1000);
     // this.gameClear(assign, dropLetter);
 }

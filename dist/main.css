@@ -85,28 +85,29 @@ a img {
   font-size: 20px;
 }
 
-.rightColumn a {
-  border-radius: 500%;
+.rightColumn button {
+  border-radius: 20%;
   border: none;
-  color: white;
-  padding: 60px;
+  color: black;
+  padding: 50px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 50px;
+  font-size: 45px;
   margin: 10px 10px;
   cursor: pointer;
 }
 
-.rightColumn a:hover {
+.rightColumn button:hover {
   color: black;
   background-color: white;
 }
 
 #words span {
-  color: white;
   position: absolute;
   font-size: 100px;
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
 }
 
 #pressed-key {
@@ -122,9 +123,18 @@ a img {
 
 #tutorial {
   position: absolute;
-  background-color: red;
+  background-color: lightslategray;
   padding: 16%;
   top: 20%;
   left: 25%;
   width: 50%;
+}
+
+#play {
+  position: absolute;
+  font-size: 30px;
+  width: 15%;
+  height: 10%;
+  top: 80%;
+  left: 42%;
 }

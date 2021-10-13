@@ -120,6 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     document.getElementById("pressed-key").addEventListener("click", () => {game.gameStart()});
+
+    let pauseEle = document.getElementById("pause");
+    pauseEle.addEventListener("click", () => {
+        if (pauseEle.innerText === "Pause") {
+            game.pause = "pause";
+            pauseEle.innerText = "Resume";
+        } else {
+            game.pause = "resume";
+            pauseEle.innerText = "Pause";
+        }
+    });
+
     // game.fillLetters();
     // debugger
     // let assign = setInterval(function () {
