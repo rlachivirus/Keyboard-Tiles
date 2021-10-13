@@ -86,7 +86,7 @@ Game.prototype.assignColumn = function () {
         subEle.setAttribute("class", pianoKey);
         let node = document.createTextNode(letter);
         subEle.appendChild(node);
-        subEle.style.left = (Math.random() * (1050 - 100 + 1) + 590) + "px";
+        subEle.style.left = (Math.floor(Math.random() * (1050 - 590) + 590)) + "px";
         let element = document.getElementById("words");
         element.appendChild(subEle);
     }

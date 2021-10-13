@@ -10,8 +10,10 @@ body {
 }
 
 .header {
-  background-color: greenyellow;
-  padding: 50px;
+  color: black;
+  font-size: 60px;
+  background-color: white;
+  padding: 20px;
   text-align: center;
   top: 10%;
 }
@@ -60,6 +62,11 @@ body {
   font-size: 50px;
 }
 
+a img {
+  height: 70px;
+  width: 70px;
+}
+
 .midColumn {
   display: flex;
   border: solid 20px;
@@ -71,11 +78,29 @@ body {
 .rightColumn {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
   padding: 20px;
   width: 25%;
+  font-size: 20px;
+}
+
+.rightColumn a {
+  border-radius: 500%;
+  border: none;
+  color: white;
+  padding: 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 50px;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+
+.rightColumn a:hover {
+  color: black;
+  background-color: white;
 }
 
 #words span {
@@ -85,6 +110,7 @@ body {
 }
 
 #pressed-key {
+  display: table;
   position: fixed;
   width: 50%;
   height: 100px;
@@ -92,4 +118,13 @@ body {
   text-align: center;
   top: 85%;
   left: 25%;
+}
+
+#tutorial {
+  position: absolute;
+  background-color: red;
+  padding: 16%;
+  top: 20%;
+  left: 25%;
+  width: 50%;
 }

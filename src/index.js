@@ -110,7 +110,15 @@ function draw() {
 
 document.addEventListener("DOMContentLoaded", function () {
                 
-    let game = new Game();      
+    let game = new Game();
+    
+    document.getElementById("play").addEventListener("click", () => {
+        let tutorial = document.getElementById("tutorial")
+        let pressedKey = document.getElementById("pressed-key");
+        pressedKey.style.display = "";
+        tutorial.style.display = "none";
+    })
+
     document.getElementById("pressed-key").addEventListener("click", () => {game.gameStart()});
     // game.fillLetters();
     // debugger
