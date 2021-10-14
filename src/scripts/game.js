@@ -7,29 +7,13 @@ function Game () {
 
 }
 
-// Game.prototype.dropAll = function () {
-//     let words = document.getElementById("words");
-
-//     for (let i = 0; i < words.childElementCount; i++) {
-//         words.children[i].drop();
-//     }
-
-    
-// }
-
 Game.prototype.drop = function () {
-    // console.log("hello")
     let words = document.getElementById("words");
     let lastEle = words.children[words.childElementCount - 1];
 
-    // let firstEle = words.children[0]
-    // for (let i = 0; i < words.childElementCount; i++) {
             let y = 2;
-            // debugger
             let id = setInterval(down.bind(this), 10);
-            // debugger
             function down() {
-                // debugger
                 if (this.pause === "resume") {
 
                 for (let i = 0; i < words.childElementCount; i++) {
@@ -45,7 +29,6 @@ Game.prototype.drop = function () {
                 } 
             }
 
-    // }
         if (this.letters.length === 0) {
             clearInterval(id);
             y = 2;
@@ -54,14 +37,6 @@ Game.prototype.drop = function () {
 }
 
 Game.prototype.fillLetters = function () {
-    // this.letters = ["a", "s", "d", "f", "g", "h", "j", "k"];
-    // this.pianoKeys = ["D", "E", "F", "G", "A", "B", "C", "D"];
-
-    // this.letters = ["♥", "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥",
-    //     "♥", "", "♥", "♥", "♥", "♥", "♥", "♥", "", "♥", "♥", "♥", "♥", "♥"];
-
-    // this.pianoKeys = ["D", "E", "F", "G", "A", "B", "C", "D"];
-
     this.letters = ["a", "s", "d", "f", "g", "h", "j", "k", "a",
         "s", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j",
         "k", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
@@ -78,18 +53,9 @@ Game.prototype.fillLetters = function () {
 }
 
 Game.prototype.assignColumn = function () {
-    // this.letters = ["a", "s", "d", "f"];
-    // this.pianoKeys = ["A", "B", "C", "D"];
-    // let that = Game.letters.bind(this);
-    // let that = ;
-
-    // debugger
     let letter = this.letters.shift();
-    // debugger
     let pianoKey = this.pianoKeys.shift();
-    // let id = setInterval(assign, 5000);
 
-    // for (let i = 0; i < this.letters.length; i++) {
     if (this.letters.length > 0) {
         let subEle = document.createElement("span");
         subEle.setAttribute("id", letter);
@@ -100,14 +66,10 @@ Game.prototype.assignColumn = function () {
         let element = document.getElementById("words");
         element.appendChild(subEle);
     }
-    // }
 }
 
 Game.prototype.gameStart = function () {
-
     this.fillLetters();
-    // debugger
-    // debugger;
     let assign = setInterval(() => {
         if (this.misses === 5) {
             this.pause = "pause"
@@ -120,26 +82,6 @@ Game.prototype.gameStart = function () {
             this.drop();
         }
     }, 800);
-    // let dropLetter = setInterval(() => {
-    //     this.drop();
-    // }, 700);
-
-    // while (true) {
-    //     // debugger;
-    //     if (this.pause === "resume") {
-    //         this.assignColumn();
-    //         this.drop();
-
-    //     } else if (this.pause === "pause") {
-    //         // clearInterval(assign);
-    //         // clearInterval(dropLetter);
-    //     }
-    // }
-
-
-    // }
-    // let dropLetter = setInterval(this.drop, 1000);
-    // this.gameClear(assign, dropLetter);
 }
 
 Game.prototype.gameClear = function (assign, drop) {
