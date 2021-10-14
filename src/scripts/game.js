@@ -33,7 +33,7 @@ Game.prototype.drop = function () {
                 if (this.pause === "resume") {
 
                 for (let i = 0; i < words.childElementCount; i++) {
-                    if (words.children[i].style.top === "550px") {
+                    if (words.children[i].style.top === "530px") {
                         let missed = document.getElementById("misses");
                         this.misses += 1;
                         missed.innerText = this.misses;
@@ -41,7 +41,7 @@ Game.prototype.drop = function () {
                     }
                 }
                 y = y + 2;
-                    lastEle.style.top = (200 + y) + "px";
+                    lastEle.style.top = (190 + y) + "px";
                 } 
             }
 
@@ -96,7 +96,7 @@ Game.prototype.assignColumn = function () {
         subEle.setAttribute("class", pianoKey);
         let node = document.createTextNode(letter);
         subEle.appendChild(node);
-        subEle.style.left = (Math.floor(Math.random() * (1050 - 590) + 590)) + "px";
+        subEle.style.left = (Math.floor(Math.random() * (1050 - 370) + 370)) + "px";
         let element = document.getElementById("words");
         element.appendChild(subEle);
     }
@@ -109,6 +109,12 @@ Game.prototype.gameStart = function () {
     // debugger
     // debugger;
     let assign = setInterval(() => {
+        if (this.misses === 5) {
+            this.pause = "pause"
+            let gameOver = document.getElementById("gameOver");
+            gameOver.style.display = "";
+        }
+        
         if (this.pause === "resume") {
             this.assignColumn();
             this.drop();
