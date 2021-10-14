@@ -22,27 +22,32 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // align-items: center;
+    align-items: center;
+
 }
 
 
 .logo1 img{
+    display: flex;
     height: 70px;
     width: 70px;
 }
 
 .logo2 img {
-    height: 90px;
-    width: 90px;
+    display: flex;
+    height: 70px;
+    width: 70px;
 }
 
 .gameName {
-    // display: flex;
+    display: flex;
     color: black;
     font-size: 300%;
-    letter-spacing: 50px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 40px;
     padding: 10px;
-    text-align:end;
+    // text-align: center;
     // width: 50%;
     // left: 100%;
     // top: 5%;
@@ -155,7 +160,7 @@ body {
     // float: left;
     display: flex;
     border: solid 20px;
-    padding: 16%;
+    padding: 13%;
     // background-color: white;
     width: 50%;
     // height: 750%;
@@ -210,7 +215,7 @@ body {
 
 #words span {
     position: absolute;
-    font-size: 70px;
+    font-size: 300%;
     color: black;
     text-shadow:
     0 0 7px #fff,
@@ -223,25 +228,15 @@ body {
     0 0 151px rgb(0, 119, 255);
 }
 
-#pressed-key {
-    display: table;
-    position: fixed;
-    border-radius: 5%;
-    width: 50%;
-    height: 100px;
-    font-size: 20pt;
-    text-align: center;
-    top: 85%;
-    left: 25%;
-}
 
 #tutorial {
     position: absolute;
     background-color: lightslategray;
-    padding: 16%;
-    top: 20%;
-    left: 25%;
-    width: 50%;
+    border-radius: 20%;
+    padding: 17%;
+    top: 13%;
+    left: 24%;
+    width: 52%;
 }
 
 #play {
@@ -251,5 +246,58 @@ body {
     height: 10%;
     top: 80%;
     left: 42%;
+    
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    // border-radius: 20%;
+    padding: 3%;
+    
+}
+
+.footer input {
+    display: block;
+    padding: 1%;
+    width: 50%;
+    border-radius: 50%;
+    height: 10%;
+    font-stretch: 50%;
+    text-align: center;
+    box-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 119, 255),
+    0 0 82px rgb(0, 132, 255),
+    0 0 92px rgb(0, 153, 255),
+    0 0 102px rgb(0, 81, 255),
+    0 0 151px rgb(0, 119, 255);
 
 }
+
+.footer span {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // align-content: flex-end;
+    align-items: center;
+    // border: block;
+    padding: 20px;
+    // background-color: white;
+    width: 25%;
+    // height: 800px;
+    font-size: 50px;
+}
+// #pressed-key {
+//     display: flex;
+//     // position: absolute;
+//     border-radius: 5%;
+//     width: 45%;
+//     height: 10%;
+//     font-size: 20pt;
+//     text-align: center;
+//     top: 85%;
+//     left: 30%;
+// }

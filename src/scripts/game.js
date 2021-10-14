@@ -2,8 +2,8 @@ function Game () {
     this.letters = [];
     this.pianoKeys = [];
     this.pause = "resume";
-    // debugger
-    this.interval = null;
+    this.misses = 0;
+    this.score = 0;
 
 }
 
@@ -24,7 +24,7 @@ Game.prototype.drop = function () {
 
     // let firstEle = words.children[0]
     // for (let i = 0; i < words.childElementCount; i++) {
-            let y = 0;
+            let y = 2;
             // debugger
             let id = setInterval(down.bind(this), 10);
             // debugger
@@ -33,12 +33,15 @@ Game.prototype.drop = function () {
                 if (this.pause === "resume") {
 
                 for (let i = 0; i < words.childElementCount; i++) {
-                    if (words.children[i].style.top === "850px") {
+                    if (words.children[i].style.top === "550px") {
+                        let missed = document.getElementById("misses");
+                        this.misses += 1;
+                        missed.innerText = this.misses;
                         words.children[i].remove();
                     }
                 }
                 y = y + 2;
-                    lastEle.style.top = (250 + y) + "px";
+                    lastEle.style.top = (200 + y) + "px";
                 } 
             }
 
@@ -110,7 +113,7 @@ Game.prototype.gameStart = function () {
             this.assignColumn();
             this.drop();
         }
-    }, 700);
+    }, 800);
     // let dropLetter = setInterval(() => {
     //     this.drop();
     // }, 700);

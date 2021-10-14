@@ -112,8 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 
     let game = new Game();
     
-    // document.querySelectorAll("*");
-
     document.getElementById("play").addEventListener("click", () => {
         let tutorial = document.getElementById("tutorial")
         let pressedKey = document.getElementById("pressed-key");
@@ -156,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // debugger
     // game.drop();
     
-})
+
 
 
 document.addEventListener("keydown", function (e) {
@@ -174,13 +172,21 @@ document.addEventListener("keydown", function (e) {
             synth.triggerAttackRelease(words.children[0].className + "5", "6n");
             words.firstElementChild.remove();
 
+            let score = document.getElementById("score");
+            console.log(game.score);
+            game.score += 10;
+            // debugger
+            score.innerText = game.score;
+            // debugger
             // music.shift();
-        // }
-        // if (e.key === "l") {
-        //     alert("wrong!");
+            // }
+            // if (e.key === "l") {
+                //     alert("wrong!");
         }
     // }
-})
+});
+
+});
 
 // function move() {
 //     let k = document.getElementById("k");
