@@ -1,24 +1,57 @@
 * {
     box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+
 }
 
 body {
     background-color: black;
+    color: black;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 119, 255),
+    0 0 82px rgb(0, 132, 255),
+    0 0 92px rgb(0, 153, 255),
+    0 0 102px rgb(0, 81, 255),
+    0 0 151px rgb(0, 119, 255);
 }
 
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+}
+
+
+.logo1 img{
+    height: 70px;
+    width: 70px;
+}
+
+.logo2 img {
+    height: 90px;
+    width: 90px;
+}
+
+.gameName {
+    // display: flex;
     color: black;
-    font-size: 60px;
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    top: 10%;
+    font-size: 300%;
+    letter-spacing: 50px;
+    padding: 10px;
+    text-align:end;
+    // width: 50%;
+    // left: 100%;
+    // top: 5%;
 }
 
 .topnav {
     // float: left;
     // background-color: hotpink;
-    color: white;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -35,23 +68,43 @@ body {
 .topnav span {
     // display: flex;
     // align-content: flex-start;
-    font-size: 30px;
-    padding: 15px;
+    font-size: 40px;
+    padding: 10px;
 }
 
-.record {
-    color: white;
+.option {
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 490px;
 }
 
-.record span {
-    display: flex;
-    align-content: flex-start;
-    font-size: 40px;
-    padding: 15px;
+// .option span {
+//     display: flex;
+//     align-content: flex-start;
+//     font-size: 40px;
+//     padding: 10px;
+// }
+
+.option button {
+    // display: flex;
+    // flex-direction: column;
+    // align-content: flex-end;
+    // justify-content: flex-end;
+    
+    // font-size: 50px;
+
+    border-radius: 20%;
+    // border: none;
+    // color: black;
+    // padding: 50px;
+    // text-align: center;
+    // text-decoration: none;
+    // display: inline-block;
+    background-color: black;
+    font-size: 50px;
+    margin: 10px 10px;
+    cursor: pointer;
 }
 
 // .topnav a {
@@ -65,7 +118,6 @@ body {
     flex-direction: row;
     justify-content: center;
     // align-items: center;
-
 }
 
 .leftColumn {
@@ -74,7 +126,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     // align-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     // border: block;
     padding: 20px;
     // background-color: white;
@@ -83,10 +135,10 @@ body {
     font-size: 50px;
 }
 
-a img {
-    height: 70px;
-    width: 70px;
-}
+// a img {
+//     height: 70px;
+//     width: 70px;
+// }
 
 // .github {
 //     height: 500px;
@@ -103,54 +155,45 @@ a img {
     // float: left;
     display: flex;
     border: solid 20px;
-    border-color: white;
     padding: 16%;
     // background-color: white;
     width: 50%;
     // height: 750%;
+    border-radius: 5%;
+    border-color: black;
+    box-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    // 0 0 42px rgb(0, 119, 255),
+    // 0 0 82px rgb(0, 132, 255),
+    // 0 0 92px rgb(0, 153, 255),
+    // 0 0 102px rgb(0, 81, 255),
+    0 0 151px rgb(0, 119, 255);
 
 }
 
 .rightColumn {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     // align-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     // border: block;
     padding: 20px;
     // background-color: white;
     width: 25%;
     // height: 800px;
-    font-size: 20px;
+    font-size: 50px;
 
 }
 
-.rightColumn button {
-    // display: flex;
-    // flex-direction: column;
-    // align-content: flex-end;
-    // justify-content: flex-end;
-    
-    // font-size: 50px;
 
-    border-radius: 20%;
-    border: none;
-    color: black;
-    padding: 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 45px;
-    margin: 10px 10px;
-    cursor: pointer;
 
-}
-
-.rightColumn button:hover {
-    color: black;
-    background-color: white;
-}
+// .rightColumn button:hover {
+//     color: black;
+//     background-color: black;
+// }
 
 // #pause {
 
@@ -167,7 +210,7 @@ a img {
 
 #words span {
     position: absolute;
-    font-size: 100px;
+    font-size: 70px;
     color: black;
     text-shadow:
     0 0 7px #fff,
@@ -183,7 +226,7 @@ a img {
 #pressed-key {
     display: table;
     position: fixed;
-    // display: flex;
+    border-radius: 5%;
     width: 50%;
     height: 100px;
     font-size: 20pt;

@@ -112,6 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 
     let game = new Game();
     
+    // document.querySelectorAll("*");
+
     document.getElementById("play").addEventListener("click", () => {
         let tutorial = document.getElementById("tutorial")
         let pressedKey = document.getElementById("pressed-key");
@@ -123,12 +125,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let pauseEle = document.getElementById("pause");
     pauseEle.addEventListener("click", () => {
-        if (pauseEle.innerText === "Pause") {
-            game.pause = "pause";
-            pauseEle.innerText = "Resume";
-        } else {
+        // if (pauseEle.innerText === "Pause") {
+        //     game.pause = "pause";
+        //     pauseEle.innerText = "Resume";
+        // } else {
+        //     game.pause = "resume";
+        //     pauseEle.innerText = "Pause";
+        // }
+        if (game.pause === "pause") {
             game.pause = "resume";
-            pauseEle.innerText = "Pause";
+        } else {
+            game.pause = "pause";
         }
     });
 

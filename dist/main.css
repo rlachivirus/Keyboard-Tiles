@@ -3,23 +3,41 @@
   \*************************************************************************************************************************************/
 * {
   box-sizing: border-box;
+  font-family: "Anton", sans-serif;
 }
 
 body {
   background-color: black;
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo1 img {
+  height: 70px;
+  width: 70px;
+}
+
+.logo2 img {
+  height: 90px;
+  width: 90px;
+}
+
+.gameName {
   color: black;
-  font-size: 60px;
-  background-color: white;
-  padding: 20px;
-  text-align: center;
-  top: 10%;
+  font-size: 300%;
+  letter-spacing: 50px;
+  padding: 10px;
+  text-align: end;
 }
 
 .topnav {
-  color: white;
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -27,23 +45,23 @@ body {
 }
 
 .topnav span {
-  font-size: 30px;
-  padding: 15px;
+  font-size: 40px;
+  padding: 10px;
 }
 
-.record {
-  color: white;
+.option {
+  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 490px;
 }
 
-.record span {
-  display: flex;
-  align-content: flex-start;
-  font-size: 40px;
-  padding: 15px;
+.option button {
+  border-radius: 20%;
+  background-color: black;
+  font-size: 50px;
+  margin: 10px 10px;
+  cursor: pointer;
 }
 
 .row {
@@ -56,56 +74,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   padding: 20px;
   width: 25%;
   font-size: 50px;
 }
 
-a img {
-  height: 70px;
-  width: 70px;
-}
-
 .midColumn {
   display: flex;
   border: solid 20px;
-  border-color: white;
   padding: 16%;
   width: 50%;
+  border-radius: 5%;
+  border-color: black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 151px #0077ff;
 }
 
 .rightColumn {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   padding: 20px;
   width: 25%;
-  font-size: 20px;
-}
-
-.rightColumn button {
-  border-radius: 20%;
-  border: none;
-  color: black;
-  padding: 50px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 45px;
-  margin: 10px 10px;
-  cursor: pointer;
-}
-
-.rightColumn button:hover {
-  color: black;
-  background-color: white;
+  font-size: 50px;
 }
 
 #words span {
   position: absolute;
-  font-size: 100px;
+  font-size: 70px;
   color: black;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
 }
@@ -113,6 +110,7 @@ a img {
 #pressed-key {
   display: table;
   position: fixed;
+  border-radius: 5%;
   width: 50%;
   height: 100px;
   font-size: 20pt;
