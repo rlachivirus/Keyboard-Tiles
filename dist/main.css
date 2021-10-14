@@ -1,3 +1,230 @@
-*{box-sizing:border-box;font-family:"Anton",sans-serif}body{background-color:#000;color:#000;text-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #07f,0 0 82px #0084ff,0 0 92px #09f,0 0 102px #0051ff,0 0 151px #07f}.header{display:flex;flex-direction:row;justify-content:space-between;align-items:center}.logo1 img{display:flex;height:70px;width:70px}.logo2 img{display:flex;height:70px;width:70px}.gameName{display:flex;color:#000;font-size:300%;justify-content:center;align-items:center;letter-spacing:40px}.topnav{color:#000;display:flex;flex-direction:row;justify-content:center;gap:400px}.topnav span{font-size:40px;padding:10px}.option{color:#000;display:flex;flex-direction:row;justify-content:center}.option button{border-radius:20%;background-color:#000;font-size:50px;margin:10px 10px;cursor:pointer}.row{display:flex;flex-direction:row;justify-content:center}.leftColumn{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding:20px;width:25%;font-size:50px}.midColumn{display:flex;border:solid 20px;padding:13%;width:50%;border-radius:5%;border-color:#000;box-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 151px #07f}.rightColumn{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding:20px;width:25%;font-size:50px}#words span{position:absolute;font-size:300%;color:#000;text-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #07f,0 0 82px #0084ff,0 0 92px #09f,0 0 102px #0051ff,0 0 151px #07f}#tutorial{position:absolute;background-color:#000;border-radius:20%;padding:0;top:13%;left:24%;width:52%;height:70%;box-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #07f,0 0 82px #0084ff,0 0 92px #09f,0 0 102px #0051ff,0 0 151px #07f}#tutorial h1{position:relative;text-align:center}#tutorial h2{position:relative;text-align:center;letter-spacing:3px;color:#000;text-shadow:0 0 7px #f5f2f2,0 0 10px #f5f2f2,0 0 13px #f5f2f2}#play{display:block;border-radius:15%;background-color:#000;color:#fff;position:absolute;font-size:30px;width:15%;height:10%;top:85%;left:42%}#play:hover{color:#fff;background-color:#000;box-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #07f,0 0 82px #0084ff,0 0 92px #09f,0 0 102px #0051ff,0 0 151px #07f;cursor:pointer}.footer{display:flex;flex-direction:row;padding:3%}.footer input{display:block;padding:1%;width:50%;border-radius:50%;height:10%;font-stretch:50%;text-align:center;box-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #07f,0 0 82px #0084ff,0 0 92px #09f,0 0 102px #0051ff,0 0 151px #07f}.footer span{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding:20px;width:25%;font-size:50px}#gameOver{position:absolute;background-color:#000;border-radius:20%;padding:0;top:13%;left:24%;width:52%;height:70%;box-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px red,0 0 82px red,0 0 92px red,0 0 102px red,0 0 151px red}#gameOver h1{position:relative;text-align:center;font-size:700%;top:10%;text-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px red,0 0 82px red,0 0 92px red,0 0 102px red,0 0 151px red}#restart{display:block;border-radius:15%;background-color:#000;color:#fff;position:absolute;font-size:30px;width:15%;height:10%;top:85%;left:42%}#restart:hover{color:#fff;background-color:#000;box-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #07f,0 0 82px #0084ff,0 0 92px #09f,0 0 102px #0051ff,0 0 151px #07f;cursor:pointer}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  font-family: "Anton", sans-serif;
+}
 
-/*# sourceMappingURL=main.css.map*/
+body {
+  background-color: black;
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo1 img {
+  display: flex;
+  height: 70px;
+  width: 70px;
+}
+
+.logo2 img {
+  display: flex;
+  height: 70px;
+  width: 70px;
+}
+
+.gameName {
+  display: flex;
+  color: black;
+  font-size: 300%;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 40px;
+}
+
+.topnav {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 400px;
+}
+
+.topnav span {
+  font-size: 40px;
+  padding: 10px;
+}
+
+.option {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  width: 25%;
+  font-size: 50px;
+}
+
+.midColumn {
+  display: flex;
+  border: solid 20px;
+  padding: 13%;
+  width: 50%;
+  border-radius: 5%;
+  border-color: black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 151px #0077ff;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  width: 25%;
+  font-size: 50px;
+}
+
+#words span {
+  position: absolute;
+  font-size: 300%;
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+}
+
+#tutorial {
+  position: absolute;
+  background-color: black;
+  border-radius: 20%;
+  padding: 0;
+  top: 13%;
+  left: 24%;
+  width: 52%;
+  height: 70%;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+}
+
+#tutorial h1 {
+  position: relative;
+  text-align: center;
+}
+
+#tutorial h2 {
+  position: relative;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+  text-shadow: 0 0 7px #f5f2f2, 0 0 10px #f5f2f2, 0 0 13px #f5f2f2;
+}
+
+#play {
+  display: block;
+  border-radius: 15%;
+  background-color: black;
+  color: white;
+  position: absolute;
+  font-size: 30px;
+  width: 15%;
+  height: 10%;
+  top: 85%;
+  left: 42%;
+}
+
+#play:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+}
+
+.footer input {
+  display: block;
+  padding: 1%;
+  width: 50%;
+  border-radius: 50%;
+  height: 10%;
+  font-stretch: 50%;
+  text-align: center;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+}
+
+.footer span {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  width: 25%;
+  font-size: 50px;
+}
+
+#gameOver {
+  position: absolute;
+  background-color: black;
+  border-radius: 20%;
+  padding: 0;
+  top: 13%;
+  left: 24%;
+  width: 52%;
+  height: 70%;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
+}
+
+#gameOver h1 {
+  position: relative;
+  text-align: center;
+  font-size: 700%;
+  top: 10%;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
+}
+
+#restart {
+  display: block;
+  border-radius: 15%;
+  background-color: black;
+  color: white;
+  position: absolute;
+  font-size: 30px;
+  width: 15%;
+  height: 10%;
+  top: 85%;
+  left: 42%;
+}
+
+#restart:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
+  cursor: pointer;
+}
+
+#pause img {
+  height: 50px;
+  width: 50px;
+  border-radius: 20%;
+  background-color: black;
+  font-size: 50px;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+
+#pause img:hover {
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+}

@@ -17,7 +17,7 @@ Game.prototype.drop = function () {
                 if (this.pause === "resume") {
 
                 for (let i = 0; i < words.childElementCount; i++) {
-                    if (words.children[i].style.top === "530px") {
+                    if (words.children[i].style.top === "500px") {
                         let missed = document.getElementById("misses");
                         this.misses += 1;
                         missed.innerText = this.misses;
@@ -25,7 +25,7 @@ Game.prototype.drop = function () {
                     }
                 }
                 y = y + 2;
-                    lastEle.style.top = (190 + y) + "px";
+                    lastEle.style.top = (140 + y) + "px";
                 } 
             }
 
