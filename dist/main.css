@@ -38,7 +38,6 @@ body {
   justify-content: center;
   align-items: center;
   letter-spacing: 40px;
-  padding: 10px;
 }
 
 .topnav {
@@ -114,21 +113,47 @@ body {
 
 #tutorial {
   position: absolute;
-  background-color: lightslategray;
+  background-color: black;
   border-radius: 20%;
-  padding: 17%;
+  padding: 0;
   top: 13%;
   left: 24%;
   width: 52%;
+  height: 70%;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+}
+
+#tutorial h1 {
+  position: relative;
+  text-align: center;
+}
+
+#tutorial h2 {
+  position: relative;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+  text-shadow: 0 0 7px #f5f2f2, 0 0 10px #f5f2f2, 0 0 13px #f5f2f2;
 }
 
 #play {
+  display: block;
+  border-radius: 15%;
+  background-color: black;
+  color: white;
   position: absolute;
   font-size: 30px;
   width: 15%;
   height: 10%;
-  top: 80%;
+  top: 85%;
   left: 42%;
+}
+
+#play:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0077ff, 0 0 82px #0084ff, 0 0 92px #0099ff, 0 0 102px #0051ff, 0 0 151px #0077ff;
+  cursor: pointer;
 }
 
 .footer {

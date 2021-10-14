@@ -46,7 +46,6 @@ body {
     justify-content: center;
     align-items: center;
     letter-spacing: 40px;
-    padding: 10px;
     // text-align: center;
     // width: 50%;
     // left: 100%;
@@ -231,23 +230,70 @@ body {
 
 #tutorial {
     position: absolute;
-    background-color: lightslategray;
+    background-color: black;
     border-radius: 20%;
-    padding: 17%;
+    padding: 0;
     top: 13%;
     left: 24%;
     width: 52%;
+    height: 70%;
+    box-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 119, 255),
+    0 0 82px rgb(0, 132, 255),
+    0 0 92px rgb(0, 153, 255),
+    0 0 102px rgb(0, 81, 255),
+    0 0 151px rgb(0, 119, 255);
+}
+
+#tutorial h1 {
+    position: relative;
+    text-align: center;
+    // text-align: center;
+}
+
+#tutorial h2 {
+    position: relative;
+    text-align: center;
+    letter-spacing: 3px;
+    color: black;
+    text-shadow:
+    0 0 7px rgb(245, 242, 242),
+    0 0 10px rgb(245, 242, 242),
+    0 0 13px rgb(245, 242, 242);
 }
 
 #play {
+    display: block;
+    border-radius: 15%;
+    background-color: black;
+    color: white;
     position: absolute;
     font-size: 30px;
     width: 15%;
     height: 10%;
-    top: 80%;
+    top: 85%;
     left: 42%;
-    
 }
+
+#play:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 119, 255),
+    0 0 82px rgb(0, 132, 255),
+    0 0 92px rgb(0, 153, 255),
+    0 0 102px rgb(0, 81, 255),
+    0 0 151px rgb(0, 119, 255);
+    cursor: pointer;
+}
+
+
 
 .footer {
     display: flex;
