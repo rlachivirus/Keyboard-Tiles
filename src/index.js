@@ -137,24 +137,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // game.fillLetters();
-    // debugger
-    // let assign = setInterval(function () {
-    //     game.assignColumn();
-    // }, 1000);
-    // let drop = setInterval(game.drop, 1000);
-    // game.gameClear(assign, drop);
-
-    // move();
-    // debugger
-    // clearInterval(game.drop, 2000);
-    // setInterval(function () {
-    //     game.drop();
-    // }, 1000);
-    // debugger
-    // game.drop();
-    
-
+    /* RESTARTING THE GAME */
+    // document.getElementById("restart").addEventListener("click", () => {
+    //     let newGame = new Game()
+    //     let gameOver = document.getElementById("gameOver");
+    //     let words = document.getElementById("words");
+    //     for (let i = 0; i < words.childElementCount; i++) {
+    //         words.children[i].remove();
+    //     }
+    //     game.misses = 0;
+    //     gameOver.style.display = "none";
+    //     newGame.gameStart();
+    // });
 
 
 document.addEventListener("keydown", function (e) {
