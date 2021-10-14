@@ -55,6 +55,11 @@ Game.prototype.fillLetters = function () {
 Game.prototype.assignColumn = function () {
     let letter = this.letters.shift();
     let pianoKey = this.pianoKeys.shift();
+    // let element = document.getElementById("words");
+    // let wordDiv = document.createElement("div");
+    // wordDiv.setAttribute("id", "word");
+    // element.appendChild(wordDiv);
+
 
     if (this.letters.length > 0) {
         let subEle = document.createElement("span");
@@ -64,6 +69,7 @@ Game.prototype.assignColumn = function () {
         subEle.appendChild(node);
         subEle.style.left = (Math.floor(Math.random() * (1050 - 370) + 370)) + "px";
         let element = document.getElementById("words");
+        
         element.appendChild(subEle);
     }
 }
@@ -89,6 +95,21 @@ Game.prototype.gameClear = function (assign, drop) {
         clearInterval(assign);
         clearInterval(drop);
     }
+}
+
+Game.prototype.gameRestart = function () {
+    debugger
+        let gameOver = document.getElementById("gameOver");
+        let words = document.querySelector("#words span");
+        words.remove();
+        // for (let i = 0; i < count; i++) {
+        //     words.children[i].remove();
+        // }
+        debugger
+        this.misses = 0;
+        this.score = 0;
+        this.pause = "resume"
+        gameOver.style.display = "none";
 }
 
 

@@ -28,15 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* RESTARTING THE GAME */
     // document.getElementById("restart").addEventListener("click", () => {
-    //     let newGame = new Game()
-    //     let gameOver = document.getElementById("gameOver");
-    //     let words = document.getElementById("words");
-    //     for (let i = 0; i < words.childElementCount; i++) {
-    //         words.children[i].remove();
-    //     }
-    //     game.misses = 0;
-    //     gameOver.style.display = "none";
-    //     newGame.gameStart();
+    //     game.gameRestart();
+    //     document.getElementById("pressed-key").addEventListener("click", () => { game.gameStart() });
     // });
 
 
