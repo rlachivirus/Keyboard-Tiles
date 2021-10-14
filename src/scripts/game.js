@@ -11,7 +11,7 @@ Game.prototype.drop = function () {
     let words = document.getElementById("words");
     let lastEle = words.children[words.childElementCount - 1];
 
-            let y = 2;
+            let y = 0;
             let id = setInterval(down.bind(this), 10);
             function down() {
                 if (this.pause === "resume") {
@@ -24,14 +24,14 @@ Game.prototype.drop = function () {
                         words.children[i].remove();
                     }
                 }
-                y = y + 2;
-                    lastEle.style.top = (140 + y) + "px";
+                y = y + 1;
+                    lastEle.style.top = (145 + y) + "px";
                 } 
             }
 
         if (this.letters.length === 0) {
             clearInterval(id);
-            y = 2;
+            y = 0;
         }
 
 }
