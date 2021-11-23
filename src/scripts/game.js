@@ -85,9 +85,10 @@ Game.prototype.gameStart = function () {
         
         if (this.pause === "resume") {
             this.assignColumn();
-            this.drop();
+            document.requestanimationframe(this.drop());
         }
     }, 800);
+
 }
 
 Game.prototype.gameClear = function (assign, drop) {
