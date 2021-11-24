@@ -33,7 +33,6 @@ Game.prototype.drop = function () {
             clearInterval(id);
             y = 0;
         }
-
 }
 
 Game.prototype.fillLetters = function () {
@@ -85,10 +84,9 @@ Game.prototype.gameStart = function () {
         
         if (this.pause === "resume") {
             this.assignColumn();
-            document.requestanimationframe(this.drop());
+            this.drop();
         }
     }, 800);
-
 }
 
 Game.prototype.gameClear = function (assign, drop) {
