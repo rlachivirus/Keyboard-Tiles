@@ -7,32 +7,57 @@ function Game () {
 
 }
 
-Game.prototype.drop = function () {
-    let words = document.getElementById("words");
-    let lastEle = words.children[words.childElementCount - 1];
+// Game.prototype.drop = function () {
+//     let words = document.getElementById("words");
+//     let lastEle = words.children[words.childElementCount - 1];
 
-            let y = 0;
-            let id = setInterval(down.bind(this), 10);
-            function down() {
-                if (this.pause === "resume") {
+//             let y = 0;
+//             let id = setInterval(down.bind(this), 10);
+//             function down() {
+//                 if (this.pause === "resume") {
 
-                for (let i = 0; i < words.childElementCount; i++) {
-                    if (words.children[i].style.top === "500px") {
-                        let missed = document.getElementById("misses");
-                        this.misses += 1;
-                        missed.innerText = this.misses;
-                        words.children[i].remove();
-                    }
-                }
-                y = y + 1;
-                    lastEle.style.top = (145 + y) + "px";
-                } 
-            }
+//                 for (let i = 0; i < words.childElementCount; i++) {
+//                     if (words.children[i].style.top === "500px") {
+//                         let missed = document.getElementById("misses");
+//                         this.misses += 1;
+//                         missed.innerText = this.misses;
+//                         words.children[i].remove();
+//                     }
+//                 }
+//                 y = y + 1;
+//                     lastEle.style.top = (145 + y) + "px";
+//                 } 
+//             }
 
-        if (this.letters.length === 0) {
-            clearInterval(id);
-            y = 0;
+//         if (this.letters.length === 0) {
+//             clearInterval(id);
+//             y = 0;
+//         }
+// }
+
+Game.prototype.drop = function (letter) {
+    let letterHeight = 145;
+    let acceleration = 1;
+
+    let y = 0;
+    // let id = setInterval(fall.bind(this), 10);
+    const fall = () => {
+        let top = parseInt(letter.style.top);
+        let newTop = `${top + y}px`;
+
+        if (letter.style.top === "500px") {
+            let missed = document.getElementById("misses");
+            this.misses += 1;
+            missed.innerText = this.misses;
+            letter.remove();
         }
+
+        letter.style.top = newTop;
+        y = y + acceleration;
+        requestAnimationFrame(fall);
+    }
+
+    requestAnimationFrame(fall);
 }
 
 Game.prototype.fillLetters = function () {
@@ -73,6 +98,22 @@ Game.prototype.assignColumn = function () {
     }
 }
 
+// Game.prototype.gameStart = function () {
+//     this.fillLetters();
+//     let assign = setInterval(() => {
+//         if (this.misses === 5) {
+//             this.pause = "pause"
+//             let gameOver = document.getElementById("gameOver");
+//             gameOver.style.display = "";
+//         }
+        
+//         if (this.pause === "resume") {
+//             this.assignColumn();
+//             this.drop();
+//         }
+//     }, 800);
+// }
+
 Game.prototype.gameStart = function () {
     this.fillLetters();
     let assign = setInterval(() => {
@@ -81,10 +122,12 @@ Game.prototype.gameStart = function () {
             let gameOver = document.getElementById("gameOver");
             gameOver.style.display = "";
         }
-        
+
         if (this.pause === "resume") {
             this.assignColumn();
-            this.drop();
+            let words = document.getElementById("words");
+            let lastEle = words.children[words.childElementCount - 1];
+            this.drop(lastEle);
         }
     }, 800);
 }
