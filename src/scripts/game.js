@@ -37,7 +37,7 @@ function Game () {
 
 Game.prototype.drop = function (letter) {
     let letterHeight = 145;
-    let acceleration = 1;
+    let acceleration = 9.8 / 60;
 
     let y = 0;
     // let id = setInterval(fall.bind(this), 10);
@@ -45,7 +45,7 @@ Game.prototype.drop = function (letter) {
         let top = parseInt(letter.style.top);
         let newTop = `${top + y}px`;
 
-        if (letter.style.top === "500px") {
+        if (letter.style.top >= "500px") {
             let missed = document.getElementById("misses");
             this.misses += 1;
             missed.innerText = this.misses;
@@ -92,6 +92,7 @@ Game.prototype.assignColumn = function () {
         let node = document.createTextNode(letter);
         subEle.appendChild(node);
         subEle.style.left = (Math.floor(Math.random() * (1050 - 370) + 370)) + "px";
+        subEle.style.top = "145px";
         let element = document.getElementById("words");
         
         element.appendChild(subEle);
@@ -127,9 +128,18 @@ Game.prototype.gameStart = function () {
             this.assignColumn();
             let words = document.getElementById("words");
             let lastEle = words.children[words.childElementCount - 1];
+            // debugger
             this.drop(lastEle);
+            // for (let i = 0; i < words.childElementCount; i++) {
+            //     if (words.children[i].style.top === "500px") {
+            //         let missed = document.getElementById("misses");
+            //         this.misses += 1;
+            //         missed.innerText = this.misses;
+            //         words.children[i].remove();
+            //     }
+            // }
         }
-    }, 800);
+    }, 1000);
 }
 
 Game.prototype.gameClear = function (assign, drop) {
