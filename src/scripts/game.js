@@ -1,6 +1,7 @@
 function Game () {
     this.letters = [];
     this.pianoKeys = [];
+    this.status = "";
     this.pause = "";
     this.misses = 0;
     this.score = 0;
@@ -122,13 +123,16 @@ Game.prototype.assignColumn = function () {
 
 Game.prototype.gameStart = function () {
     this.fillLetters();
+    this.status = "play";
     this.pause = "resume";
     let assign = setInterval(() => {
-        if (this.misses === 5) {
+        if (this.misses >= 5) {
             this.pause = "pause"
             let gameOver = document.getElementById("gameOver");
             gameOver.style.display = "";
             // clearInterval(assign);
+            let words = document.getElementById("words");
+            words.style.display = "none";
         }
 
         if (this.pause === "resume") {

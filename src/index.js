@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
         tutorial.style.display = "none";
     })
 
-    document.getElementById("pressed-key").addEventListener("click", () => {game.gameStart()});
+    document.getElementById("pressed-key").addEventListener("click", () => {
+        if (game.status !== "play") {
+            game.gameStart()
+        }
+    });
 
     let pauseEle = document.getElementById("pause");
     pauseEle.addEventListener("click", () => {
