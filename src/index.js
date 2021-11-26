@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pauseEle.addEventListener("click", () => {
         if (game.pause === "pause") {
             game.pause = "resume";
-        } else {
+        } else if (game.pause === "resume") {
             game.pause = "pause";
         }
     });

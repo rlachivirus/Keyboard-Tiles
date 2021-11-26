@@ -1,7 +1,7 @@
 function Game () {
     this.letters = [];
     this.pianoKeys = [];
-    this.pause = "resume";
+    this.pause = "";
     this.misses = 0;
     this.score = 0;
 
@@ -36,26 +36,29 @@ function Game () {
 // }
 
 Game.prototype.drop = function (letter) {
-    let letterHeight = 145;
+    // let letterHeight = 145;
     let acceleration = 0.1;
 
     let y = 0;
     // let id = setInterval(fall.bind(this), 10);
     const fall = () => {
-        let top = parseInt(letter.style.top);
+        let currentLetter = document.getElementById(letter.textContent);
+        let top = parseInt(currentLetter.style.top);
         let newTop = `${top + y}px`;
+        let missed = document.getElementById("misses");
 
-        if (letter.style.top >= "500px") {
-            let missed = document.getElementById("misses");
-            let currentLetter = document.getElementById(letter.textContent);
-
-            currentLetter.remove();
+        if (currentLetter.style.top >= "500px") {
             this.misses += 1;
             missed.innerText = this.misses;
+
+            currentLetter.remove();
+            // letter.remove();
         }
 
-        letter.style.top = newTop;
-        y = y + acceleration;
+        if (this.pause === "resume") {
+            currentLetter.style.top = newTop;
+            y = y + acceleration;
+        }
         requestAnimationFrame(fall);
     }
 
@@ -119,12 +122,13 @@ Game.prototype.assignColumn = function () {
 
 Game.prototype.gameStart = function () {
     this.fillLetters();
+    this.pause = "resume";
     let assign = setInterval(() => {
         if (this.misses === 5) {
             this.pause = "pause"
             let gameOver = document.getElementById("gameOver");
             gameOver.style.display = "";
-            clearInterval(assign);
+            // clearInterval(assign);
         }
 
         if (this.pause === "resume") {
