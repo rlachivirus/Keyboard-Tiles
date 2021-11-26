@@ -37,7 +37,7 @@ function Game () {
 
 Game.prototype.drop = function (letter) {
     let letterHeight = 145;
-    let acceleration = 9.8 / 60;
+    let acceleration = 0.1;
 
     let y = 0;
     // let id = setInterval(fall.bind(this), 10);
@@ -47,9 +47,11 @@ Game.prototype.drop = function (letter) {
 
         if (letter.style.top >= "500px") {
             let missed = document.getElementById("misses");
+            let currentLetter = document.getElementById(letter.textContent);
+
+            currentLetter.remove();
             this.misses += 1;
             missed.innerText = this.misses;
-            letter.remove();
         }
 
         letter.style.top = newTop;
@@ -122,13 +124,13 @@ Game.prototype.gameStart = function () {
             this.pause = "pause"
             let gameOver = document.getElementById("gameOver");
             gameOver.style.display = "";
+            clearInterval(assign);
         }
 
         if (this.pause === "resume") {
             this.assignColumn();
             let words = document.getElementById("words");
             let lastEle = words.children[words.childElementCount - 1];
-            // debugger
             this.drop(lastEle);
             // for (let i = 0; i < words.childElementCount; i++) {
             //     if (words.children[i].style.top === "500px") {
@@ -163,6 +165,5 @@ Game.prototype.gameRestart = function () {
         this.pause = "resume"
         gameOver.style.display = "none";
 }
-
 
 module.exports = Game;

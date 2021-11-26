@@ -52,3 +52,60 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// /* Given the coordinates, creates a ball element */
+// const createBall = (top, left) => {
+//     const $ball = document.createElement("div");
+//     $ball.classList.add("ball");
+//     let node = document.createTextNode("FALLING");
+//     $ball.appendChild(node);
+//     $ball.style.top = top + "px";
+//     $ball.style.left = left - 25 + "px";
+//     document.body.appendChild($ball);
+//     return $ball;
+// };
+
+// const initFalling = ball => {
+//     /* Constants */
+//     const ballHeight = 50
+//     const acceleration = 9.8 / 60;
+//     const { innerHeight } = window;
+
+//     /* Variable to denote the speed of the ball */
+//     let fallingSpeed = 0;
+//     const animateFall = () => {
+//         const top = parseInt(ball.style.top);
+//         const newTop = `${top + fallingSpeed}px`;
+
+//         /* To break the fall, when the ball is near the surface */
+//         if (parseInt(newTop) >= innerHeight - ballHeight) {
+//             ball.style.top = this.innerHeight - ballHeight + "px";
+//             ball.style.background = "red";
+//             return null;
+//         }
+
+//         /* Else set the top to the new value */
+//         ball.style.top = newTop;
+//         fallingSpeed = fallingSpeed + acceleration;
+//         requestAnimationFrame(animateFall);
+//     };
+
+//     /* Fire the first animation */
+//     requestAnimationFrame(animateFall);
+// };
+
+// /* Event handler */
+// const onClickListener = event => {
+//     const { x, y } = event;
+//     /*
+//     The event coordinates and the positioning coordinates 
+//      are inverted. That is 'x' here refers to the left in positioning.
+//      */
+//     setInterval(() => {
+//     const ball = createBall(y, x);
+//     initFalling(ball)
+//     }, 2000)
+// };
+
+// /* Attach on-click listener to document */
+// document.addEventListener("click", onClickListener, false);
