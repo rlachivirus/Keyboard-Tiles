@@ -133,9 +133,10 @@ Game.prototype.gameStart = function () {
             // clearInterval(assign);
             let words = document.getElementById("words");
             // words.style.display = "none";
-            for (let i = 0; i < words.childElementCount; i++) {
-                words.children[i].remove();
-            }
+            // for (let i = 0; i < words.childElementCount; i++) {
+            //     words.children[i].remove();
+            // }
+            words.innerHTML = "";
             // debugger
             clearInterval(assign);
             // debugger
@@ -173,10 +174,13 @@ Game.prototype.gameRestart = function () {
     let score = document.getElementById("score");
     let input = document.getElementById("pressed-key");
 
+    // if (words.children) {
+    //     for (let i = 0; i < words.childElementCount; i++) {
+    //         words.children[i].remove();
+    //     }
+    // }
     
-    for (let i = 0; i < words.childElementCount; i++) {
-        words.children[i].remove();
-    }
+    words.innerHTML = "";
 
     input.value = "";
     missed.innerText = 0;

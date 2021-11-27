@@ -52,19 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let synth = new Tone.Synth()//.toDestination();
         synth.oscillator.type = "sine";
         synth.toMaster();
+        
+        if (game.pause === "resume" && e.key === words.children[0].id) {
+            synth.triggerAttackRelease(words.children[0].className + "5", "6n");
+            words.firstElementChild.remove();
 
-        if (game.pause === "resume") {
-            if (e.key === words.children[0].id) {
-                
-                synth.triggerAttackRelease(words.children[0].className + "5", "6n");
-                words.firstElementChild.remove();
-    
-                let score = document.getElementById("score");
-                game.score += 10;
-                score.innerText = game.score;
-    
-                input.value = "";
-            }
+            let score = document.getElementById("score");
+            game.score += 10;
+            score.innerText = game.score;
+
+            input.value = "";
         }
     });
 
