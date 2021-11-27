@@ -155,7 +155,7 @@ Game.prototype.gameStart = function () {
             //     }
             // }
         }
-    }, 1000);
+    }, 500);
 
 }
 
@@ -171,12 +171,14 @@ Game.prototype.gameRestart = function () {
     let words = document.getElementById("words");
     let missed = document.getElementById("misses");
     let score = document.getElementById("score");
+    let input = document.getElementById("pressed-key");
 
     
     for (let i = 0; i < words.childElementCount; i++) {
         words.children[i].remove();
     }
-    
+
+    input.value = "";
     missed.innerText = 0;
     score.innerText = 0;
     gameOver.style.display = "none";

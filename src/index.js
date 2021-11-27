@@ -44,19 +44,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("keydown", function (e) {
         let words = document.getElementById("words");
+        let input = document.getElementById("pressed-key");
         let synth = new Tone.Synth()//.toDestination();
         synth.oscillator.type = "sine";
         synth.toMaster();
 
-            if (e.key === words.children[0].id) {
-                
-                synth.triggerAttackRelease(words.children[0].className + "5", "6n");
-                words.firstElementChild.remove();
+        if (e.key === words.children[0].id) {
+            
+            synth.triggerAttackRelease(words.children[0].className + "5", "6n");
+            words.firstElementChild.remove();
 
-                let score = document.getElementById("score");
-                game.score += 10;
-                score.innerText = game.score;
-            }
+            let score = document.getElementById("score");
+            game.score += 10;
+            score.innerText = game.score;
+
+            // input.value = "";
+        }
     });
 
 });
