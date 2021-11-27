@@ -136,7 +136,11 @@ Game.prototype.gameStart = function () {
             // for (let i = 0; i < words.childElementCount; i++) {
             //     words.children[i].remove();
             // }
-            words.innerHTML = "";
+            // words.innerHTML = "";
+            while (words.firstChild) {
+                words.removeChild(words.firstChild);
+            }
+
             // debugger
             clearInterval(assign);
             // debugger
@@ -179,8 +183,11 @@ Game.prototype.gameRestart = function () {
     //         words.children[i].remove();
     //     }
     // }
-    
-    words.innerHTML = "";
+    // words.innerHTML = "";
+
+    while (words.firstChild) {
+        words.removeChild(words.firstChild);
+    }
 
     input.value = "";
     missed.innerText = 0;
