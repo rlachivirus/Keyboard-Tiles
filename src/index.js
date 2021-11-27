@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (game.status !== "play") {
             game.gameStart()
         }
+
+        if (game.pause === "pause") {
+            game.pause = "resume"
+        }
     });
 
     let pauseEle = document.getElementById("pause");
@@ -49,16 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
         synth.oscillator.type = "sine";
         synth.toMaster();
 
-        if (e.key === words.children[0].id) {
-            
-            synth.triggerAttackRelease(words.children[0].className + "5", "6n");
-            words.firstElementChild.remove();
-
-            let score = document.getElementById("score");
-            game.score += 10;
-            score.innerText = game.score;
-
-            // input.value = "";
+        if (game.pause === "resume") {
+            if (e.key === words.children[0].id) {
+                
+                synth.triggerAttackRelease(words.children[0].className + "5", "6n");
+                words.firstElementChild.remove();
+    
+                let score = document.getElementById("score");
+                game.score += 10;
+                score.innerText = game.score;
+    
+                input.value = "";
+            }
         }
     });
 
