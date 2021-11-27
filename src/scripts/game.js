@@ -136,6 +136,9 @@ Game.prototype.gameStart = function () {
             for (let i = 0; i < words.childElementCount; i++) {
                 words.children[i].remove();
             }
+            // debugger
+            clearInterval(assign);
+            // debugger
         }
 
         if (this.pause === "resume") {
@@ -153,6 +156,7 @@ Game.prototype.gameStart = function () {
             // }
         }
     }, 1000);
+
 }
 
 Game.prototype.gameClear = function (assign, drop) {
@@ -163,22 +167,28 @@ Game.prototype.gameClear = function (assign, drop) {
 }
 
 Game.prototype.gameRestart = function () {
-    // let gameOver = document.getElementById("gameOver");
-    // let words = document.getElementById("words");
+    let gameOver = document.getElementById("gameOver");
+    let words = document.getElementById("words");
+    let missed = document.getElementById("misses");
+    let score = document.getElementById("score");
 
-    // for (let i = 0; i < words.childElementCount; i++) {
-    //         words.children[i].remove();
-    // }
+    
+    for (let i = 0; i < words.childElementCount; i++) {
+        words.children[i].remove();
+    }
+    
+    missed.innerText = 0;
+    score.innerText = 0;
+    gameOver.style.display = "none";
+    words.style.display = "";
+    this.letters = [];
+    this.pianoKeys = [];
+    this.status = "";
+    this.pause = "";
+    this.misses = 0;
+    this.score = 0;
 
-    // gameOver.style.display = "none";
-    // words.style.display = "";
-    // this.letters = [];
-    // this.pianoKeys = [];
-    // this.status = "";
-    // this.pause = "";
-    // this.misses = 0;
-    // this.score = 0;
-    location.reload()
+    // location.reload()
 }
 
 module.exports = Game;

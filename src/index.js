@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 words.firstElementChild.remove();
 
                 let score = document.getElementById("score");
-                console.log(game.score);
                 game.score += 10;
                 score.innerText = game.score;
             }
