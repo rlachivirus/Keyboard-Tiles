@@ -5,8 +5,9 @@
 const Game = require("./scripts/game");
 
 document.addEventListener("DOMContentLoaded", function () {
-                
+
     let game = new Game();
+
     
     document.getElementById("play").addEventListener("click", () => {
         let tutorial = document.getElementById("tutorial")
@@ -29,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
             game.pause = "pause";
         }
     });
+
+    document.getElementById("restart").addEventListener("click", () => {
+        game.gameRestart()
+    })
 
     /* RESTARTING THE GAME */
     // document.getElementById("restart").addEventListener("click", () => {

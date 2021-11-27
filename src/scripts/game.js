@@ -132,7 +132,10 @@ Game.prototype.gameStart = function () {
             gameOver.style.display = "";
             // clearInterval(assign);
             let words = document.getElementById("words");
-            words.style.display = "none";
+            // words.style.display = "none";
+            for (let i = 0; i < words.childElementCount; i++) {
+                words.children[i].remove();
+            }
         }
 
         if (this.pause === "resume") {
@@ -160,18 +163,22 @@ Game.prototype.gameClear = function (assign, drop) {
 }
 
 Game.prototype.gameRestart = function () {
-    debugger
-        let gameOver = document.getElementById("gameOver");
-        let words = document.querySelector("#words span");
-        words.remove();
-        // for (let i = 0; i < count; i++) {
-        //     words.children[i].remove();
-        // }
-        debugger
-        this.misses = 0;
-        this.score = 0;
-        this.pause = "resume"
-        gameOver.style.display = "none";
+    // let gameOver = document.getElementById("gameOver");
+    // let words = document.getElementById("words");
+
+    // for (let i = 0; i < words.childElementCount; i++) {
+    //         words.children[i].remove();
+    // }
+
+    // gameOver.style.display = "none";
+    // words.style.display = "";
+    // this.letters = [];
+    // this.pianoKeys = [];
+    // this.status = "";
+    // this.pause = "";
+    // this.misses = 0;
+    // this.score = 0;
+    location.reload()
 }
 
 module.exports = Game;
