@@ -54,10 +54,10 @@ Game.prototype.drop = function (letter) {
 
         if (currentLetter.style.top >= "61%") {
         // if (currentLetter.style.top >= "33vw") {
+            currentLetter.remove();
             this.misses += 1;
             missed.innerText = this.misses;
 
-            currentLetter.remove();
             // letter.remove();
         }
 
@@ -143,7 +143,7 @@ Game.prototype.gameStart = function () {
     let words = document.getElementById("words");
 
     let assign = setInterval(() => {
-        if (this.misses >= 5) {
+        if (this.misses === 5) {
             this.pause = "pause"
             let gameOver = document.getElementById("gameOver");
             let pressedKey = document.getElementById("pressed-key");
@@ -155,9 +155,10 @@ Game.prototype.gameStart = function () {
             //     words.children[i].remove();
             // }
             // words.innerHTML = "";
-            while (words.firstChild) {
-                words.removeChild(words.firstChild);
-            }
+
+            // while (words.firstChild) {
+            //     words.removeChild(words.firstChild);
+            // }
 
             pressedKey.style.display = "none";
 
@@ -165,7 +166,7 @@ Game.prototype.gameStart = function () {
             clearInterval(assign);
             // debugger
         }
-
+            
         if (this.letters.length === 0 && words.children.length === 0) {
             let stageClear = document.getElementById("stageClear");
             let cleared = document.getElementById("cleared");
@@ -184,6 +185,7 @@ Game.prototype.gameStart = function () {
             }
 
         }
+        
 
         if (this.pause === "resume") {
             this.assignColumn();
@@ -199,7 +201,7 @@ Game.prototype.gameStart = function () {
             //     }
             // }
         }
-    }, 500);
+    }, 600);
 
 }
 

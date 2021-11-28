@@ -22,8 +22,8 @@
 // "A", "C", "A", "C", "D", "D#", "D", "C"].length)
 
 function Keys() {
-    this.letters = [["a", "s", "d"], ["f", "g", "h"], ["j", "k", "a"]];
-    this.pianoKeys = [["E", "E", "E"], ["C", "E", "G"], ["G", "C", "G"]];
+    this.letters = [["a", "s", "d", "f", "g", "h"], ["j", "k", "a", "s", "d", "f"], ["g", "h", "j", "k", "d", "f"]];
+    this.pianoKeys = [["E", "E", "E", "C", "E", "G"], ["G", "C", "G", "E", "A", "B"], ["A#", "A", "G", "E", "G", "A"]];
 }
 
 module.exports = Keys;
