@@ -349,6 +349,24 @@
     // 0 0 102px rgb(255, 0, 0),
 }
 
+.stageClear-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.stageClear-buttons button {
+    border-radius: 50px;
+    color: white;
+    font-size: 2vw;
+    width: 17%;
+    cursor: pointer;
+}
+
+.stageClear-buttons button:hover {
+    box-shadow: 0 0 7px #fff;
+}
+
 #gameClear {
     position: absolute;
     background-color: black;
@@ -381,4 +399,22 @@
     // 0 0 82px rgb(255, 0, 0),
     // 0 0 92px rgb(255, 0, 0),
     // 0 0 102px rgb(255, 0, 0),
+}
+
+#playAgain {
+    display: block;
+    border-radius: 50px;
+    // background-color: black;
+    color: white;
+    position: absolute;
+    font-size: 2vw;
+    width: 19%;
+    // height: 10%;
+    top: 85%;
+    left: 42%;
+    cursor: pointer;
+}
+
+#playAgain:hover {
+    box-shadow: 0 0 7px #fff;
 }
