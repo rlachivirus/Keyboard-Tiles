@@ -25,24 +25,26 @@
     // align-items: center;
 }
 
-
-.logo1 img{
-    height: 70px;
-    width: 70px;
+.header .link {
+    height: auto;
+    width: 5%;
 }
 
-.logo2 img {
-    height: 70px;
-    width: 70px;
+.logo {
+    width: 100%;
+    height: auto;
 }
 
 .gameName {
     color: white;
-    font-size: 300%;
-    letter-spacing: 20px;
-    width: 800px;
+    font-size: 3.5vw;
+    letter-spacing: 2vw;
+    // width: 800px;
+    // height: 5%;
+    // width: 55%;
     text-align: center;
-    padding-left: 30px;
+    margin: 0;
+    padding-left: 3vw;
 }
 
 // .topnav {
