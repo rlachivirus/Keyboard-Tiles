@@ -144,10 +144,10 @@ Game.prototype.gameStart = function () {
 
     let assign = setInterval(() => {
         if (this.misses === 5) {
-            this.pause = "pause"
             let gameOver = document.getElementById("gameOver");
             let pressedKey = document.getElementById("pressed-key");
             gameOver.style.display = "";
+            this.pause = "pause"
             // clearInterval(assign);
             // let words = document.getElementById("words");
             // words.style.display = "none";
@@ -165,26 +165,28 @@ Game.prototype.gameStart = function () {
             // debugger
             clearInterval(assign);
             // debugger
+        } else if (this.letters.length === 0 && words.children.length === 0) {
+            // if (this.letters.length === 0 && words.children.length === 0) {
+                let stageClear = document.getElementById("stageClear");
+                let cleared = document.getElementById("cleared");
+                let gameClear = document.getElementById("gameClear");
+                let level = document.getElementById("level");
+    
+                clearInterval(assign);
+                // this.gameRestart();
+    
+                if (this.level === 3) {
+                    gameClear.style.display = "";
+                    cleared.innerText = `Game Cleared!`;
+                } else {
+                    stageClear.style.display = "";
+                    level.innerText = `Level ${this.level}/3 Cleared!`;
+                }
+    
+            // }
+
         }
             
-        if (this.letters.length === 0 && words.children.length === 0) {
-            let stageClear = document.getElementById("stageClear");
-            let cleared = document.getElementById("cleared");
-            let gameClear = document.getElementById("gameClear");
-            let level = document.getElementById("level");
-
-            clearInterval(assign);
-            // this.gameRestart();
-
-            if (this.level === 3) {
-                gameClear.style.display = "";
-                cleared.innerText = `Game Cleared!`;
-            } else {
-                stageClear.style.display = "";
-                level.innerText = `Level ${this.level}/3 Cleared!`;
-            }
-
-        }
         
 
         if (this.pause === "resume") {
