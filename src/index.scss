@@ -123,17 +123,15 @@
 
 #words span {
     position: absolute;
-    font-size: 300%;
+    font-size: 3vw;
     color: black;
     text-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff,
-    0 0 42px rgb(0, 119, 255),
-    0 0 82px rgb(0, 132, 255),
-    0 0 92px rgb(0, 153, 255),
-    0 0 102px rgb(0, 81, 255),
-    0 0 151px rgb(0, 119, 255);
+    0 0 42px rgb(0, 132, 255),
+    0 0 62px rgb(0, 119, 255),
+    0 0 102px rgb(0, 81, 255);
     background: transparent;
 }
 

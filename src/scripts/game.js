@@ -5,7 +5,7 @@ function Game () {
     this.pause = "";
     this.misses = 0;
     this.score = 0;
-    this.speed = 0.2;
+    this.speed = 0.03;
 
 }
 
@@ -46,10 +46,10 @@ Game.prototype.drop = function (letter) {
     const fall = () => {
         let currentLetter = document.getElementById(letter.textContent);
         let top = parseInt(currentLetter.style.top);
-        let newTop = `${top + y}px`;
+        let newTop = `${top + y}%`;
         let missed = document.getElementById("misses");
 
-        if (currentLetter.style.top >= "500px") {
+        if (currentLetter.style.top >= "63%") {
             this.misses += 1;
             missed.innerText = this.misses;
 
@@ -98,8 +98,8 @@ Game.prototype.assignColumn = function () {
         subEle.setAttribute("class", pianoKey);
         let node = document.createTextNode(letter);
         subEle.appendChild(node);
-        subEle.style.left = (Math.floor(Math.random() * (1050 - 370) + 370)) + "px";
-        subEle.style.top = "145px";
+        subEle.style.left = (Math.floor(Math.random() * (72 - 27) + 27)) + "%";
+        subEle.style.top = "16.5%";
         let element = document.getElementById("words");
         
         element.appendChild(subEle);
@@ -130,6 +130,7 @@ Game.prototype.gameStart = function () {
         if (this.misses >= 5) {
             this.pause = "pause"
             let gameOver = document.getElementById("gameOver");
+            let pressedKey = document.getElementById("pressed-key");
             gameOver.style.display = "";
             // clearInterval(assign);
             let words = document.getElementById("words");
@@ -141,6 +142,8 @@ Game.prototype.gameStart = function () {
             while (words.firstChild) {
                 words.removeChild(words.firstChild);
             }
+
+            pressedKey.style.display = "none";
 
             // debugger
             clearInterval(assign);
@@ -191,6 +194,7 @@ Game.prototype.gameRestart = function () {
     }
 
     input.value = "";
+    input.style.display = "";
     missed.innerText = 0;
     score.innerText = 0;
     gameOver.style.display = "none";
