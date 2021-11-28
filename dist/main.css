@@ -50,9 +50,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 1%;
   width: 25%;
-  font-size: 50px;
+  font-size: 3.5vw;
   background: transparent;
 }
 
@@ -75,9 +75,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 1%;
   width: 25%;
-  font-size: 50px;
+  font-size: 3.5vw;
   background: transparent;
 }
 
@@ -99,10 +99,9 @@
   background-color: black;
   border-radius: 50px;
   padding: 0;
-  top: 11%;
   left: 23%;
   width: 55%;
-  height: 75%;
+  height: 40vw;
   box-shadow: 0 0 7px #fff;
 }
 
@@ -112,7 +111,7 @@
   border: none;
   color: white;
   border: transparent;
-  font-size: 25px;
+  font-size: 2vw;
   background: transparent;
 }
 
@@ -122,9 +121,8 @@
   background-color: black;
   color: white;
   position: absolute;
-  font-size: 30px;
+  font-size: 2vw;
   width: 15%;
-  height: 10%;
   top: 85%;
   left: 42%;
   cursor: pointer;
@@ -161,10 +159,9 @@
   position: absolute;
   background-color: black;
   border-radius: 50px;
-  top: 11%;
   left: 23%;
   width: 55%;
-  height: 75%;
+  height: 40vw;
   z-index: 10;
   box-shadow: 0 0 7px red;
 }
@@ -172,7 +169,7 @@
 #gameOver h1 {
   position: relative;
   text-align: center;
-  font-size: 700%;
+  font-size: 10vw;
   top: 10%;
   text-shadow: 0 0 7px red;
 }
@@ -194,14 +191,15 @@
   box-shadow: 0 0 7px red;
 }
 
-#pause img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  background-color: black;
-  font-size: 50px;
-  margin: 10px 10px;
+#pause {
+  width: 4vw;
   cursor: pointer;
+}
+
+#pause img {
+  width: 100%;
+  border-radius: 50px;
+  margin: 10%;
 }
 
 #pause img:hover {
