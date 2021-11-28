@@ -33,7 +33,7 @@
         <button id="play">PLAY</button>
     </div>
 
-    <div style="display: none" id="gameOver">
+    <div id="gameOver" style="display: none">
         <h1>GAME OVER!</h1>
         <button id="restart">RESTART</button>
     </div>
@@ -48,7 +48,6 @@
     </div>
     
     <div class="row">
-        
         <div class="leftColumn">
             <span>MISSED</span>
             <span id="misses">0</span>
@@ -63,14 +62,21 @@
 
         
         <div id="words"></div>
-        
+    </div>
+
+    <div id="stageClear" style="display: none">
+        <p id="level"></p>
+        <div>
+            <button id="exit">EXIT</button>
+            <button id="next">NEXT</button>
+        </div>
     </div>
     
-        <div class="inputArea">
-            <span></span>
-            <input style="display: none" type="text" id="pressed-key" placeholder="Click to Start">
-            <span></span>
-        </div>
+    <div class="inputArea">
+        <span></span>
+        <input style="display: none" type="text" id="pressed-key" placeholder="Click to Start">
+        <span></span>
+    </div>
         
 </body>
 

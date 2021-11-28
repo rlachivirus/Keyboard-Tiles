@@ -69,19 +69,22 @@ Game.prototype.drop = function (letter) {
 }
 
 Game.prototype.fillLetters = function () {
-    this.letters = ["a", "s", "d", "f", "g", "h", "j", "k", "a",
-        "s", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j",
-        "k", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
-        "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
-        "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
-        "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
-        "f", "g", "h", "j", "k", "k"];
-    this.pianoKeys = ["E", "E", "E", "C", "E", "G", "G", "C", "G", "E", "A", "B", "A#",
-        "A", "G", "E", "G", "A", "F", "G", "E", "C", "D", "B", "C", "G",
-        "E", "A", "B", "A#", "A", "G", "E", "G", "A", "F", "G", "E", "C", "D",
-        "B", "G", "F#", "F", "D#", "E", "G#", "A", "C", "A", "C", "D", "G",
-        "F#", "F", "D#", "E", "C", "C", "C", "G", "F#", "F", "D#", "E", "G#",
-        "A", "C", "A", "C", "D", "D#", "D", "C", "C"];
+    // this.letters = ["a", "s", "d", "f", "g", "h", "j", "k", "a",
+    //     "s", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j",
+    //     "k", "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+    //     "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+    //     "d", "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+    //     "f", "g", "h", "j", "k", "d", "f", "g", "h", "j", "k",
+    //     "f", "g", "h", "j", "k", "k"];
+    // this.pianoKeys = ["E", "E", "E", "C", "E", "G", "G", "C", "G", "E", "A", "B", "A#",
+    //     "A", "G", "E", "G", "A", "F", "G", "E", "C", "D", "B", "C", "G",
+    //     "E", "A", "B", "A#", "A", "G", "E", "G", "A", "F", "G", "E", "C", "D",
+    //     "B", "G", "F#", "F", "D#", "E", "G#", "A", "C", "A", "C", "D", "G",
+    //     "F#", "F", "D#", "E", "C", "C", "C", "G", "F#", "F", "D#", "E", "G#",
+    //     "A", "C", "A", "C", "D", "D#", "D", "C", "C"];
+
+    this.letters = ["a", "s", "d"];
+    this.pianoKeys = ["E", "E", "E"];
 }
 
 Game.prototype.assignColumn = function () {
@@ -91,16 +94,17 @@ Game.prototype.assignColumn = function () {
     // let wordDiv = document.createElement("div");
     // wordDiv.setAttribute("id", "word");
     // element.appendChild(wordDiv);
+    // debugger
 
-
-    if (this.letters.length > 0) {
+    // if (this.letters.length > 0) {
+    if (letter) {
         let subEle = document.createElement("span");
         subEle.setAttribute("id", letter);
         subEle.setAttribute("class", pianoKey);
         let node = document.createTextNode(letter);
         subEle.appendChild(node);
         subEle.style.left = (Math.floor(Math.random() * (72 - 27) + 27)) + "%";
-        subEle.style.top = "16.5%";
+        subEle.style.top = "17%";
         // subEle.style.top = "10vw";
         let element = document.getElementById("words");
         
@@ -150,6 +154,10 @@ Game.prototype.gameStart = function () {
             // debugger
             clearInterval(assign);
             // debugger
+        }
+
+        if (this.letters.length === 0) {
+            clearInterval(assign);
         }
 
         if (this.pause === "resume") {
