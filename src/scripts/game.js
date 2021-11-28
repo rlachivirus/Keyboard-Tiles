@@ -5,6 +5,7 @@ function Game () {
     this.pause = "";
     this.misses = 0;
     this.score = 0;
+    this.speed = 0.2;
 
 }
 
@@ -38,7 +39,7 @@ function Game () {
 
 Game.prototype.drop = function (letter) {
     // let letterHeight = 145;
-    let acceleration = 0.1;
+    let acceleration = this.speed;
 
     let y = 0;
     // let id = setInterval(fall.bind(this), 10);
