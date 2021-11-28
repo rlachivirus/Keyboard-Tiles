@@ -1,3 +1,5 @@
+const Keys = require("./keys");
+
 function Game () {
     this.letters = [];
     this.pianoKeys = [];
@@ -83,9 +85,14 @@ Game.prototype.fillLetters = function () {
     //     "B", "G", "F#", "F", "D#", "E", "G#", "A", "C", "A", "C", "D", "G",
     //     "F#", "F", "D#", "E", "C", "C", "C", "G", "F#", "F", "D#", "E", "G#",
     //     "A", "C", "A", "C", "D", "D#", "D", "C", "C"];
+    
+    // this.letters = ["a", "s", "d"];
+    // this.pianoKeys = ["E", "E", "E"];
 
-    this.letters = ["a", "s", "d"];
-    this.pianoKeys = ["E", "E", "E"];
+    let keys = new Keys();
+
+    this.letters = keys.letters[this.level - 1];
+    this.pianoKeys = keys.pianoKeys[this.level -1];
 }
 
 Game.prototype.assignColumn = function () {
