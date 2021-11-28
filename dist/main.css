@@ -179,9 +179,8 @@
   border-radius: 50px;
   color: white;
   position: absolute;
-  font-size: 30px;
-  width: 15%;
-  height: 10%;
+  font-size: 2vw;
+  width: 17%;
   top: 85%;
   left: 42%;
   cursor: pointer;
