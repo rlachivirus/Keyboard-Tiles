@@ -39,14 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
         game.gameRestart()
     })
 
-    document.getElementById("exit").addEventListener("click", () => location.reload())
+    document.getElementById("exit").addEventListener("click", () => location.reload());
 
     document.getElementById("next").addEventListener("click", () => {
         let stageClear = document.getElementById("stageClear")
         game.gameRestart();
+        game.speed = game.speed + 0.03;
         game.level++;
         stageClear.style.display = "none";
-    })
+    });
+
+    document.getElementById("playAgain").addEventListener("click", () => location.reload());
 
     /* RESTARTING THE GAME */
     // document.getElementById("restart").addEventListener("click", () => {

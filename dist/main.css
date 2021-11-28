@@ -225,3 +225,23 @@
   top: 10%;
   text-shadow: 0 0 7px #fff;
 }
+
+#gameClear {
+  position: absolute;
+  background-color: black;
+  border-radius: 50px;
+  top: 11%;
+  left: 23%;
+  width: 55%;
+  height: 40vw;
+  z-index: 10;
+  box-shadow: 0 0 7px #fff;
+}
+
+#gameClear #cleared {
+  position: relative;
+  text-align: center;
+  font-size: 5vw;
+  top: 10%;
+  text-shadow: 0 0 7px #fff;
+}
