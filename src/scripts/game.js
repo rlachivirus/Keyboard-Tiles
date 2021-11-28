@@ -6,6 +6,7 @@ function Game () {
     this.misses = 0;
     this.score = 0;
     this.speed = 0.04;
+    this.level = 1;
 
 }
 
@@ -132,6 +133,8 @@ Game.prototype.gameStart = function () {
     this.fillLetters();
     this.status = "play";
     this.pause = "resume";
+    let words = document.getElementById("words");
+
     let assign = setInterval(() => {
         if (this.misses >= 5) {
             this.pause = "pause"
@@ -139,7 +142,7 @@ Game.prototype.gameStart = function () {
             let pressedKey = document.getElementById("pressed-key");
             gameOver.style.display = "";
             // clearInterval(assign);
-            let words = document.getElementById("words");
+            // let words = document.getElementById("words");
             // words.style.display = "none";
             // for (let i = 0; i < words.childElementCount; i++) {
             //     words.children[i].remove();
@@ -156,8 +159,16 @@ Game.prototype.gameStart = function () {
             // debugger
         }
 
-        if (this.letters.length === 0) {
+        if (this.letters.length === 0 && words.children.length === 0) {
+            let stageClear = document.getElementById("stageClear");
+            let level = document.getElementById("level");
+
             clearInterval(assign);
+            // this.gameRestart();
+
+            stageClear.style.display = "";
+            level.innerText = `Level ${this.level}/3 Cleared!`;
+
         }
 
         if (this.pause === "resume") {

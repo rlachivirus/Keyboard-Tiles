@@ -39,6 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
         game.gameRestart()
     })
 
+    document.getElementById("exit").addEventListener("click", () => location.reload())
+
+    document.getElementById("next").addEventListener("click", () => {
+        let stageClear = document.getElementById("stageClear")
+        game.gameRestart();
+        game.level++;
+        stageClear.style.display = "none";
+    })
+
     /* RESTARTING THE GAME */
     // document.getElementById("restart").addEventListener("click", () => {
     //     game.gameRestart();

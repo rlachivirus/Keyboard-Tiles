@@ -210,19 +210,18 @@
   position: absolute;
   background-color: black;
   border-radius: 50px;
-  padding: 0;
+  top: 11%;
   left: 23%;
   width: 55%;
   height: 40vw;
+  z-index: 10;
   box-shadow: 0 0 7px #fff;
 }
 
 #stageClear #level {
-  top: 40px;
+  position: relative;
   text-align: center;
-  border: none;
-  color: white;
-  border: transparent;
-  font-size: 2vw;
-  background: transparent;
+  font-size: 5vw;
+  top: 10%;
+  text-shadow: 0 0 7px #fff;
 }
