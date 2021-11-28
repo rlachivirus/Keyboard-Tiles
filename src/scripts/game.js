@@ -5,7 +5,7 @@ function Game () {
     this.pause = "";
     this.misses = 0;
     this.score = 0;
-    this.speed = 0.03;
+    this.speed = 0.04;
 
 }
 
@@ -49,7 +49,8 @@ Game.prototype.drop = function (letter) {
         let newTop = `${top + y}%`;
         let missed = document.getElementById("misses");
 
-        if (currentLetter.style.top >= "63%") {
+        if (currentLetter.style.top >= "61%") {
+        // if (currentLetter.style.top >= "33vw") {
             this.misses += 1;
             missed.innerText = this.misses;
 
@@ -100,6 +101,7 @@ Game.prototype.assignColumn = function () {
         subEle.appendChild(node);
         subEle.style.left = (Math.floor(Math.random() * (72 - 27) + 27)) + "%";
         subEle.style.top = "16.5%";
+        // subEle.style.top = "10vw";
         let element = document.getElementById("words");
         
         element.appendChild(subEle);
