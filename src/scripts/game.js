@@ -90,7 +90,7 @@ Game.prototype.fillLetters = function () {
     // this.pianoKeys = ["E", "E", "E"];
 
     let keys = new Keys();
-
+    debugger
     this.letters = keys.letters;
     this.pianoKeys = keys.pianoKeys[this.level -1];
 }
