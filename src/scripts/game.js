@@ -91,7 +91,7 @@ Game.prototype.fillLetters = function () {
 
     let keys = new Keys();
 
-    this.letters = keys.letters[this.level - 1];
+    this.letters = keys.letters;
     this.pianoKeys = keys.pianoKeys[this.level -1];
 }
 
