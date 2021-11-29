@@ -52,7 +52,7 @@ Game.prototype.drop = function (letter) {
         let newTop = `${top + y}%`;
         let missed = document.getElementById("misses");
 
-        if (currentLetter.style.top >= "61%") {
+        if (currentLetter.style.top >= "65%") {
         // if (currentLetter.style.top >= "33vw") {
             currentLetter.remove();
             this.misses += 1;
@@ -112,7 +112,7 @@ Game.prototype.assignColumn = function () {
         let node = document.createTextNode(letter);
         subEle.appendChild(node);
         subEle.style.left = (Math.floor(Math.random() * (72 - 27) + 27)) + "%";
-        subEle.style.top = "17%";
+        subEle.style.top = "20%";
         // subEle.style.top = "10vw";
         let element = document.getElementById("words");
         
