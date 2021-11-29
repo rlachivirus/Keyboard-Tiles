@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body.style.display = "";
         inputArea.style.display = "";
         game.gameRestart();
-        game.speed = game.speed + 0.03;
+        game.speed = game.speed + 0.01;
         game.level++;
         stageClear.style.display = "none";
     });
@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
             game.score += 10;
             score.innerText = game.score;
 
-            input.value = "";
         }
+        input.value = "";
     });
 
 });

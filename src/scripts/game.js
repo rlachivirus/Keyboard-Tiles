@@ -7,7 +7,7 @@ function Game () {
     this.pause = "";
     this.misses = 0;
     this.score = 0;
-    this.speed = 0.04;
+    this.speed = 0.03;
     this.level = 1;
 
 }
@@ -215,7 +215,7 @@ Game.prototype.gameStart = function () {
             //     }
             // }
         }
-    }, 600);
+    }, 700);
 
 }
 
