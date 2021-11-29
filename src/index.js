@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
         synth.toMaster();
         
         if (game.pause === "resume" && e.key === words.children[0].id) {
-            synth.triggerAttackRelease(words.children[0].className + "5", "6n");
+            // synth.triggerAttackRelease(words.children[0].className + "5", "6n");
+            synth.triggerAttackRelease(words.children[0].className, "6n");
             words.firstElementChild.remove();
 
             let score = document.getElementById("score");
