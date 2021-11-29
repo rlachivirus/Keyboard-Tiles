@@ -145,7 +145,8 @@ Game.prototype.gameStart = function () {
     let assign = setInterval(() => {
         if (this.misses === 5) {
             let gameOver = document.getElementById("gameOver");
-            let pressedKey = document.getElementById("pressed-key");
+            let body = document.getElementById("body");
+            let inputArea = document.getElementById("inputArea");
             gameOver.style.display = "";
             this.pause = "pause"
             // clearInterval(assign);
@@ -160,7 +161,8 @@ Game.prototype.gameStart = function () {
             //     words.removeChild(words.firstChild);
             // }
 
-            pressedKey.style.display = "none";
+            body.style.display = "none";
+            inputArea.style.display = "none";
 
             // debugger
             clearInterval(assign);
@@ -230,6 +232,8 @@ Game.prototype.gameRestart = function () {
     let missed = document.getElementById("misses");
     let score = document.getElementById("score");
     let input = document.getElementById("pressed-key");
+    let body = document.getElementById("body");
+    let inputArea = document.getElementById("inputArea");
 
     // if (words.children) {
     //     for (let i = 0; i < words.childElementCount; i++) {
@@ -243,7 +247,8 @@ Game.prototype.gameRestart = function () {
     }
 
     input.value = "";
-    input.style.display = "";
+    body.style.display = "";
+    inputArea.style.display = "";
     missed.innerText = 0;
     score.innerText = 0;
     gameOver.style.display = "none";

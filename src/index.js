@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    document.getElementById("restart").addEventListener("click", () => {
+    document.getElementById("retry").addEventListener("click", () => {
         game.gameRestart()
     })
 

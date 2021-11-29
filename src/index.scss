@@ -44,7 +44,7 @@
     // width: 55%;
     text-align: center;
     margin: 0;
-    padding-left: 3vw;
+    padding-left: 2vw;
 }
 
 // .topnav {
@@ -128,10 +128,10 @@
     text-shadow:
     0 0 7px #fff,
     0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(0, 132, 255),
-    0 0 62px rgb(0, 119, 255),
-    0 0 102px rgb(0, 81, 255);
+    0 0 15px #fff;
+    // 0 0 42px rgb(0, 132, 255),
+    // 0 0 62px rgb(0, 119, 255),
+    // 0 0 102px rgb(0, 81, 255);
     background: transparent;
 }
 
@@ -141,10 +141,10 @@
     background-color: black;
     border-radius: 50px;
     padding: 0;
-    // top: 11%;
-    left: 23%;
+    top: 15%;
+    left: 22.5%;
     width: 55%;
-    height: 40vw;
+    height: 38vw;
     box-shadow: 
     0 0 7px #fff,
     // 0 0 10px #fff,
@@ -158,14 +158,28 @@
 
 #tutorial p {
     top: 40px;
+    margin: 0;
     text-align: center;
     // width: 400px;
     border: none;
-    color: white;
+    color: black;
     // margin-left: 80px;
     border: transparent;
     font-size: 2vw;
     background: transparent;
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff;
+}
+
+#tutorial p:first-child {
+    font-size: 4vw;
+    margin: 3%;
+}
+
+#tutorial p:nth-child(2) {
+    margin: 6%;
+    margin-top: 3%
 }
 
 // #tutorial h2 {
@@ -234,10 +248,10 @@
     position: absolute;
     background-color: black;
     border-radius: 50px;
-    // top: 11%;
-    left: 23%;
-    width: 55%;
-    height: 40vw;
+    top: 15%;
+    left: 28.5%;
+    width: 42%;
+    height: 27vw;
     z-index: 10;
     box-shadow: 
     // 0 0 7px #fff,
@@ -253,8 +267,9 @@
 #gameOver h1 {
     position: relative;
     text-align: center;
-    font-size: 10vw;
+    font-size: 8vw;
     top: 10%;
+    margin: 0;
     text-shadow: 
     // 0 0 7px #fff,
     // 0 0 10px #fff,
@@ -266,7 +281,7 @@
     0 0 7px rgb(255, 0, 0);
 }
 
-#restart {
+#retry {
     display: block;
     border-radius: 50px;
     // background-color: black;
@@ -275,12 +290,12 @@
     font-size: 2vw;
     width: 17%;
     // height: 10%;
-    top: 85%;
+    top: 80%;
     left: 42%;
     cursor: pointer;
 }
 
-#restart:hover {
+#retry:hover {
     box-shadow: 
     // 0 0 7px #fff,
     // 0 0 10px #fff,
@@ -319,10 +334,10 @@
     position: absolute;
     background-color: black;
     border-radius: 50px;
-    top: 11%;
-    left: 23%;
-    width: 55%;
-    height: 40vw;
+    top: 15%;
+    left: 27.4%;
+    width: 45%;
+    height: 28vw;
     z-index: 10;
     box-shadow: 
     0 0 7px #fff;
@@ -338,7 +353,7 @@
     position: relative;
     text-align: center;
     font-size: 5vw;
-    top: 10%;
+    margin: 5%;
     text-shadow: 
     0 0 7px #fff;
     // 0 0 10px #fff,
@@ -353,6 +368,7 @@
     position: relative;
     text-align: center;
     font-size: 4vw;
+    margin-top: 0;
     text-shadow: 
     0 0 7px #fff;
 }
@@ -361,6 +377,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    column-gap: 5%;
+    background: transparent;
 }
 
 .stageClear-buttons button {
@@ -379,10 +397,10 @@
     position: absolute;
     background-color: black;
     border-radius: 50px;
-    top: 11%;
-    left: 23%;
-    width: 55%;
-    height: 40vw;
+    top: 15%;
+    left: 28.5%;
+    width: 42%;
+    height: 27vw;
     z-index: 10;
     box-shadow: 
     0 0 7px #fff;
@@ -397,8 +415,9 @@
 #gameClear #cleared {
     position: relative;
     text-align: center;
-    font-size: 5vw;
+    font-size: 6vw;
     top: 10%;
+    margin: 0;
     text-shadow: 
     0 0 7px #fff;
     // 0 0 10px #fff,
@@ -424,10 +443,10 @@
     color: white;
     position: absolute;
     font-size: 2vw;
-    width: 19%;
+    width: 24%;
     // height: 10%;
-    top: 85%;
-    left: 42%;
+    top: 80%;
+    left: 38%;
     cursor: pointer;
 }
 
