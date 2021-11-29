@@ -171,16 +171,26 @@ Game.prototype.gameStart = function () {
                 let cleared = document.getElementById("cleared");
                 let gameClear = document.getElementById("gameClear");
                 let level = document.getElementById("level");
+                let body = document.getElementById("body");
+                let inputArea = document.getElementById("inputArea");
+                let stageScore = document.getElementById("stageScore");
+                let clearedScore = document.getElementById("clearedScore");
     
                 clearInterval(assign);
                 // this.gameRestart();
     
                 if (this.level === 3) {
+                    body.style.display = "none";
+                    inputArea.style.display = "none";
                     gameClear.style.display = "";
                     cleared.innerText = `Game Cleared!`;
+                    clearedScore.innerText = `Score: ${this.score}`;
                 } else {
+                    body.style.display = "none";
+                    inputArea.style.display = "none";
                     stageClear.style.display = "";
                     level.innerText = `Level ${this.level}/3 Cleared!`;
+                    stageScore.innerText = `Score: ${this.score}`;
                 }
     
             // }

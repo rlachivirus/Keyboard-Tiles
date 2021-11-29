@@ -11,9 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
     document.getElementById("play").addEventListener("click", () => {
         let tutorial = document.getElementById("tutorial")
-        let pressedKey = document.getElementById("pressed-key");
-        pressedKey.style.display = "";
+        // let pressedKey = document.getElementById("pressed-key");
+        let body = document.getElementById("body");
+        let inputArea = document.getElementById("inputArea");
+
+        body.style.display = "";
+        inputArea.style.display = "";
         tutorial.style.display = "none";
+        // pressedKey.style.display = "";
     })
 
     document.getElementById("pressed-key").addEventListener("click", () => {
@@ -43,6 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("next").addEventListener("click", () => {
         let stageClear = document.getElementById("stageClear")
+        let body = document.getElementById("body");
+        let inputArea = document.getElementById("inputArea");
+
+        body.style.display = "";
+        inputArea.style.display = "";
         game.gameRestart();
         game.speed = game.speed + 0.03;
         game.level++;

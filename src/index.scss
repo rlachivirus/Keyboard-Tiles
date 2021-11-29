@@ -206,12 +206,12 @@
     // 0 0 151px rgb(0, 119, 255);
 }
 
-.inputArea {
+#inputArea {
     display: flex;
     flex-direction: row;
 }
 
-.inputArea input {
+#inputArea input {
     position: relative;
     padding: 1%;
     width: 50%;
@@ -224,7 +224,7 @@
     font-size: 1vw;
 }
 
-.inputArea span {
+#inputArea span {
     background: transparent;
     width: 25%;
 }
@@ -349,6 +349,14 @@
     // 0 0 102px rgb(255, 0, 0),
 }
 
+#stageClear #stageScore {
+    position: relative;
+    text-align: center;
+    font-size: 4vw;
+    text-shadow: 
+    0 0 7px #fff;
+}
+
 .stageClear-buttons {
     display: flex;
     flex-direction: row;
@@ -399,6 +407,14 @@
     // 0 0 82px rgb(255, 0, 0),
     // 0 0 92px rgb(255, 0, 0),
     // 0 0 102px rgb(255, 0, 0),
+}
+
+#gameClear #clearedScore {
+    position: relative;
+    text-align: center;
+    font-size: 4vw;
+    text-shadow: 
+    0 0 7px #fff;
 }
 
 #playAgain {

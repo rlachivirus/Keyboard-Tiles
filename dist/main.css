@@ -133,12 +133,12 @@
   box-shadow: 0 0 7px #fff;
 }
 
-.inputArea {
+#inputArea {
   display: flex;
   flex-direction: row;
 }
 
-.inputArea input {
+#inputArea input {
   position: relative;
   padding: 1%;
   width: 50%;
@@ -151,7 +151,7 @@
   font-size: 1vw;
 }
 
-.inputArea span {
+#inputArea span {
   background: transparent;
   width: 25%;
 }
@@ -226,6 +226,13 @@
   text-shadow: 0 0 7px #fff;
 }
 
+#stageClear #stageScore {
+  position: relative;
+  text-align: center;
+  font-size: 4vw;
+  text-shadow: 0 0 7px #fff;
+}
+
 .stageClear-buttons {
   display: flex;
   flex-direction: row;
@@ -261,6 +268,13 @@
   text-align: center;
   font-size: 5vw;
   top: 10%;
+  text-shadow: 0 0 7px #fff;
+}
+
+#gameClear #clearedScore {
+  position: relative;
+  text-align: center;
+  font-size: 4vw;
   text-shadow: 0 0 7px #fff;
 }
 
