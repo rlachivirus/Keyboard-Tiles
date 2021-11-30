@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body.style.display = "";
         inputArea.style.display = "";
         game.gameRestart();
-        game.speed = game.speed + 0.01;
+        game.speed = game.speed + 0.015;
         game.level++;
         stageClear.style.display = "none";
     });
@@ -73,11 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let input = document.getElementById("pressed-key");
         let synth = new Tone.Synth()//.toDestination();
         synth.oscillator.type = "sine";
+        synth.volume.value = -15;
         synth.toMaster();
         
         if (game.pause === "resume" && e.key === words.children[0].id) {
             // synth.triggerAttackRelease(words.children[0].className + "5", "6n");
-            synth.triggerAttackRelease(words.children[0].className, "6n");
+            synth.triggerAttackRelease(words.children[0].className, "4n");
             words.firstElementChild.remove();
 
             let score = document.getElementById("score");
