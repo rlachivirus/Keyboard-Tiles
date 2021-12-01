@@ -93,31 +93,16 @@ body {
     left: 22.5%;
     width: 55%;
     height: 38vw;
-    box-shadow: 
-    0 0 7px #fff,
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(0, 119, 255),
-    // 0 0 82px rgb(0, 132, 255),
-    // 0 0 92px rgb(0, 153, 255),
-    // 0 0 102px rgb(0, 81, 255),
-    // 0 0 151px rgb(0, 119, 255);
+    box-shadow: 0 0 7px $primaryGrey;
 }
 
 #tutorial p {
+    color: $primaryGrey;
     top: 40px;
     margin: 0;
     text-align: center;
-    // width: 400px;
-    border: none;
-    color: #e9e9e9;
-    // margin-left: 80px;
-    border: transparent;
     font-size: 2vw;
     background: transparent;
-    // text-shadow: 
-    //     0 0 7px #fff,
-    //     0 0 10px #fff;
 }
 
 #tutorial p:first-child {
@@ -131,46 +116,24 @@ body {
 }
 
 #tutorial p:nth-child(3) {
-    // color:rgb(182, 0, 0)
     color: $primaryRed;
 }
 
-// #tutorial h2 {
-//     position: relative;
-//     text-align: center;
-//     letter-spacing: 3px;
-//     color: black;
-//     text-shadow:
-//     0 0 7px rgb(245, 242, 242),
-//     // 0 0 10px rgb(245, 242, 242),
-//     // 0 0 13px rgb(245, 242, 242);
-// }
-
 #play {
-    display: block;
+    position: absolute;
     border-radius: 50px;
     background-color: black;
-    color: #e9e9e9;
-    position: absolute;
+    color: $primaryGrey;
     font-size: 2vw;
     width: 15%;
-    // height: 10%;
     top: 85%;
     left: 42%;
     cursor: pointer;
 }
 
 #play:hover {
-    color: white;
-    box-shadow: 
-    0 0 7px #fff;
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(0, 119, 255),
-    // 0 0 82px rgb(0, 132, 255),
-    // 0 0 92px rgb(0, 153, 255),
-    // 0 0 102px rgb(0, 81, 255),
-    // 0 0 151px rgb(0, 119, 255);
+    color: $primaryGrey;
+    box-shadow: 0 0 7px $primaryGrey;
 }
 
 #inputArea {
@@ -185,8 +148,8 @@ body {
     border-radius: 50px;
     text-align: center;
     top: 3vw;
-    color: white;
-    box-shadow: 0 0 5px 0 #fff;
+    color: $primaryGrey;
+    box-shadow: 0 0 5px $primaryGrey;
     border: transparent;
     font-size: 1vw;
 }
@@ -199,22 +162,12 @@ body {
 
 #gameOver {
     position: absolute;
-    // background-color: transparent;
     border-radius: 50px;
     top: 150%;
     left: 28.5%;
     width: 42%;
     height: 27vw;
-    z-index: 10;
-    box-shadow: 
-    // 0 0 7px #fff,
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(255, 0, 0),
-    // 0 0 82px rgb(255, 0, 0),
-    // 0 0 92px rgb(255, 0, 0),
-    // 0 0 102px rgb(255, 0, 0),
-    0 0 7px rgb(255, 0, 0);
+    box-shadow: 0 0 7px $primaryRed;
 }
 
 #gameOver h1 {
@@ -224,41 +177,22 @@ body {
     font-size: 8vw;
     top: 10%;
     margin: 0;
-    text-shadow: 
-    // 0 0 7px #fff,
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(255, 0, 0),
-    // 0 0 82px rgb(255, 0, 0),
-    // 0 0 92px rgb(255, 0, 0),
-    // 0 0 102px rgb(255, 0, 0),
-    0 0 7px rgb(255, 0, 0);
+    text-shadow: 0 0 7px $primaryRed;
 }
 
 #retry {
-    display: block;
-    border-radius: 50px;
-    // background-color: black;
-    color: white;
     position: absolute;
+    border-radius: 50px;
+    color: $primaryGrey;
     font-size: 2vw;
     width: 17%;
-    // height: 10%;
     top: 80%;
     left: 42%;
     cursor: pointer;
 }
 
 #retry:hover {
-    box-shadow: 
-    // 0 0 7px #fff,
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(255, 0, 0),
-    // 0 0 82px rgb(255, 0, 0),
-    // 0 0 92px rgb(255, 0, 0),
-    // 0 0 102px rgb(255, 0, 0),
-    0 0 7px rgb(255, 0, 0);
+    box-shadow: 0 0 7px $primaryRed;
 }
 
 #pause {
@@ -274,15 +208,7 @@ body {
 }
 
 #pause img:hover {
-    box-shadow: 
-    0 0 7px #fff,
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(0, 119, 255),
-    // 0 0 82px rgb(0, 132, 255),
-    // 0 0 92px rgb(0, 153, 255),
-    // 0 0 102px rgb(0, 81, 255),
-    // 0 0 151px rgb(0, 119, 255);
+    box-shadow: 0 0 7px $primaryGrey;
 }
 
 #stageClear {
@@ -293,15 +219,7 @@ body {
     left: 27.4%;
     width: 45%;
     height: 28vw;
-    z-index: 10;
-    box-shadow: 
-    0 0 7px #fff;
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(255, 0, 0),
-    // 0 0 82px rgb(255, 0, 0),
-    // 0 0 92px rgb(255, 0, 0),
-    // 0 0 102px rgb(255, 0, 0),
+    box-shadow: 0 0 7px $primaryGrey;
 }
 
 #stageClear #level {
@@ -311,13 +229,7 @@ body {
     font-size: 5vw;
     margin: 5%;
     text-shadow: 
-    0 0 7px #fff;
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(255, 0, 0),
-    // 0 0 82px rgb(255, 0, 0),
-    // 0 0 92px rgb(255, 0, 0),
-    // 0 0 102px rgb(255, 0, 0),
+    0 0 7px $primaryGrey;
 }
 
 #stageClear #stageScore {
@@ -325,8 +237,7 @@ body {
     text-align: center;
     font-size: 4vw;
     margin-top: 0;
-    text-shadow: 
-    0 0 7px #fff;
+    text-shadow: 0 0 7px $primaryGrey;
 }
 
 .stageClear-buttons {
@@ -339,14 +250,14 @@ body {
 
 .stageClear-buttons button {
     border-radius: 50px;
-    color: #e9e9e9;
+    color: $primaryGrey;
     font-size: 2vw;
     width: 17%;
     cursor: pointer;
 }
 
 .stageClear-buttons button:hover {
-    box-shadow: 0 0 7px #fff;
+    box-shadow: 0 0 7px $primaryGrey;
 }
 
 #gameClear {
@@ -357,15 +268,7 @@ body {
     left: 29%;
     width: 42%;
     height: 27vw;
-    z-index: 10;
-    box-shadow: 
-    0 0 7px #fff;
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(255, 0, 0),
-    // 0 0 82px rgb(255, 0, 0),
-    // 0 0 92px rgb(255, 0, 0),
-    // 0 0 102px rgb(255, 0, 0),
+    box-shadow: 0 0 7px $primaryGrey;
 }
 
 #gameClear #cleared {
@@ -375,14 +278,7 @@ body {
     font-size: 6vw;
     top: 10%;
     margin: 0;
-    text-shadow: 
-    0 0 7px #fff;
-    // 0 0 10px #fff,
-    // 0 0 21px #fff,
-    // 0 0 42px rgb(255, 0, 0),
-    // 0 0 82px rgb(255, 0, 0),
-    // 0 0 92px rgb(255, 0, 0),
-    // 0 0 102px rgb(255, 0, 0),
+    text-shadow: 0 0 7px $primaryGrey;
 }
 
 #gameClear #clearedScore {
@@ -391,23 +287,20 @@ body {
     text-align: center;
     font-size: 4vw;
     text-shadow: 
-    0 0 7px #fff;
+    0 0 7px $primaryGrey;
 }
 
 #playAgain {
-    display: block;
-    border-radius: 50px;
-    // background-color: black;
-    color: #e9e9e9;
     position: absolute;
+    border-radius: 50px;
+    color: $primaryGrey;
     font-size: 2vw;
     width: 12vw;
-    // height: 10%;
     top: 80%;
     left: 36%;
     cursor: pointer;
 }
 
 #playAgain:hover {
-    box-shadow: 0 0 7px #fff;
+    box-shadow: 0 0 7px $primaryGrey;
 }
