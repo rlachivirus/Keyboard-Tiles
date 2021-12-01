@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             game.score += 10;
             gameScore.innerText = game.score;
         }
+        
         input.value = "";
     });
 
