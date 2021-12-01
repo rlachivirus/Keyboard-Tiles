@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
         
         if (game.pause === "resume" && e.key === words.children[0].id) {
             synth.triggerAttackRelease(words.children[0].className, "4n");
-            words.firstElementChild.remove();
+            // words.firstElementChild.remove();
+            words.firstChild.remove();
 
             let gameScore = document.getElementById("score");
             game.score += 10;

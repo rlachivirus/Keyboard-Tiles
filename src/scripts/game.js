@@ -17,23 +17,30 @@ Game.prototype.drop = function (letter) {
     let y = 0;
 
     const fall = () => {
-        let currentLetter = document.getElementById(letter.textContent);
-        let top = parseInt(currentLetter.style.top);
-        let newTop = `${top + y}%`;
-        let missed = document.getElementById("misses");
+        let currentLetter = null;
 
-        if (currentLetter.style.top >= "81%") {
-            this.misses += 1;
-            missed.innerText = this.misses;
-            currentLetter.remove();
+        if (letter != null) {
+            currentLetter = document.getElementById(letter.textContent);
         }
 
-        if (this.pause === "resume") {
-            currentLetter.style.top = newTop;
-            y = y + acceleration;
-        }
+        if (currentLetter != null) {
+            let top = parseInt(currentLetter.style.top);
+            let newTop = `${top + y}%`;
+            let missed = document.getElementById("misses");
+    
+            if (currentLetter.style.top >= "81%") {
+                this.misses += 1;
+                missed.innerText = this.misses;
+                currentLetter.remove();
+            }
+    
+            if (this.pause === "resume") {
+                currentLetter.style.top = newTop;
+                y = y + acceleration;
+            }
 
-        requestAnimationFrame(fall);
+            requestAnimationFrame(fall);
+        }
     }
 
     requestAnimationFrame(fall);
@@ -116,7 +123,7 @@ Game.prototype.gameStart = function () {
 
             let words = document.getElementById("words");
             let lastEle = words.children[words.childElementCount - 1];
-            
+
             this.drop(lastEle);
         }
 
