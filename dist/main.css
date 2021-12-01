@@ -32,12 +32,13 @@
 }
 
 .gameName {
-  color: #e9e9e9;
+  color: black;
   font-size: 3.5vw;
   letter-spacing: 2vw;
   text-align: center;
   margin: 0;
   padding-left: 2vw;
+  text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #fff;
 }
 
 .option {
@@ -45,6 +46,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 10;
 }
 
 .row {
@@ -70,9 +72,8 @@
 }
 
 .midColumn {
-  border: solid 20px;
-  padding: 13%;
-  width: 50%;
+  height: 26vw;
+  width: 90vw;
   border-radius: 50px;
   border-color: black;
   box-shadow: 0 0 7px #fff;
@@ -94,6 +95,10 @@
   text-shadow: 0 0 7px #fff;
 }
 
+body {
+  position: relative;
+}
+
 #words span {
   position: absolute;
   font-size: 3vw;
@@ -107,7 +112,7 @@
   background-color: black;
   border-radius: 50px;
   padding: 0;
-  top: 15%;
+  top: 150%;
   left: 22.5%;
   width: 55%;
   height: 38vw;
@@ -183,7 +188,7 @@
 #gameOver {
   position: absolute;
   border-radius: 50px;
-  top: 15%;
+  top: 150%;
   left: 28.5%;
   width: 42%;
   height: 27vw;
@@ -237,7 +242,7 @@
   position: absolute;
   background-color: black;
   border-radius: 50px;
-  top: 15%;
+  top: 150%;
   left: 27.4%;
   width: 45%;
   height: 28vw;
@@ -286,7 +291,7 @@
   position: absolute;
   background-color: black;
   border-radius: 50px;
-  top: 15%;
+  top: 150%;
   left: 29%;
   width: 42%;
   height: 27vw;
