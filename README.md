@@ -10,13 +10,12 @@ In “Keyboard Tiles,” users will be able to:
 
 * Type according to the letters shown
 * Listen to a random music while typing
-* Check if there are any typos
-* Check if the order of letters is correct
+* Pause and resume game
 
 In addition, this project will include:
 
 * Instructions
-* A scoreboard
+* A missed and score boards
 * Different levels of difficulty
 
 # Wireframes
@@ -26,14 +25,14 @@ In addition, this project will include:
 # Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies:
-* The Canvas API to render the game board and moving tiles
+* DOM manipulation
 * Web Audio API to make sounds
 * Webpack to bundle JavaScript code
 
 # Implementation Timeline
 
-* Friday: Setup project, get comfortable with all the APIs that will be implemented in this project, and get canvas to show up on the screen.
-* Weekend: Brainstorm and implement the underlying logic behind the game. Ensure that there are moving tiles and have a text box where I can type. If time permits, try to connect these two to make sure correctly typed letters remove the tiles.
-* Monday & Tuesday: Get the audio to work and create user controls such as start/pause, skip, and quit.
+* Friday: Setup project, get comfortable with all the APIs that will be implemented in this project.
+* Weekend: Brainstorm and implement the underlying logic behind the game. Ensure that there are moving letters and have a text box where I can type. If time permits, try to connect these two to make sure correctly typed letters remove the letters.
+* Monday & Tuesday: Get the audio to work and create start/pause control.
 * Wednesday: Focus on styling.
 * Thursday: Deploy to GitHub. If time permits, rewrite this proposal.
