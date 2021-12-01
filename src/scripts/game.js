@@ -68,6 +68,7 @@ Game.prototype.gameStart = function () {
     let words = document.getElementById("words");
     this.status = "play";
     this.pause = "resume";
+    
     this.fillLetters();
 
     let assign = setInterval(() => {
@@ -111,10 +112,11 @@ Game.prototype.gameStart = function () {
         }
             
         if (this.pause === "resume") {
+            this.assignColumn();
+
             let words = document.getElementById("words");
             let lastEle = words.children[words.childElementCount - 1];
             
-            this.assignColumn();
             this.drop(lastEle);
         }
 
