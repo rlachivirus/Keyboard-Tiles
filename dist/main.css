@@ -6,6 +6,17 @@
   background-color: black;
 }
 
+body {
+  position: relative;
+}
+
+#words span {
+  position: absolute;
+  font-size: 3vw;
+  color: #e9e9e9;
+  background: transparent;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -19,16 +30,11 @@
 
 .logo {
   width: 100%;
-  height: auto;
   border-radius: 50px;
 }
 
 .logo:hover {
-  box-shadow: 0 0 7px #fff;
-}
-
-.link:nth-child(2) {
-  align-self: flex-start;
+  box-shadow: 0 0 7px #e9e9e9;
 }
 
 .gameName {
@@ -36,17 +42,14 @@
   font-size: 3.5vw;
   letter-spacing: 2vw;
   text-align: center;
-  margin: 0;
   padding-left: 2vw;
-  text-shadow: 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #fff;
+  text-shadow: 0 0 5px #e9e9e9, 0 0 7px #e9e9e9, 0 0 10px #e9e9e9;
 }
 
 .option {
-  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  z-index: 10;
 }
 
 .row {
@@ -55,7 +58,7 @@
   justify-content: center;
 }
 
-.leftColumn {
+.column {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -66,45 +69,16 @@
   background: transparent;
 }
 
-.leftColumn span {
+.column span {
   color: black;
-  text-shadow: 0 0 7px #fff;
+  text-shadow: 0 0 7px #e9e9e9;
 }
 
 .midColumn {
   height: 26vw;
   width: 90vw;
   border-radius: 50px;
-  border-color: black;
-  box-shadow: 0 0 7px #fff;
-}
-
-.rightColumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 1%;
-  width: 25%;
-  font-size: 3.5vw;
-  background: transparent;
-}
-
-.rightColumn span {
-  color: black;
-  text-shadow: 0 0 7px #fff;
-}
-
-body {
-  position: relative;
-}
-
-#words span {
-  position: absolute;
-  font-size: 3vw;
-  color: #e9e9e9;
-  text-shadow: 0 0 2px #fff;
-  background: transparent;
+  box-shadow: 0 0 7px #e9e9e9;
 }
 
 #tutorial {
@@ -141,7 +115,7 @@ body {
 }
 
 #tutorial p:nth-child(3) {
-  color: #b60000;
+  color: #ff0000;
 }
 
 #play {
